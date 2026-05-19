@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -1478,6 +1478,159 @@ html.a11y-contrast #a11y-panel {
   .hero-badges { grid-template-columns: 1fr 1fr !important; }
 }
 
+
+/* ===== FADE-IN ANIMATIONS (hero) ===== */
+@keyframes fadeInFromRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInFromLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* text side fades in from the right (RTL reading direction) */
+.hero-split-text {
+  animation: fadeInFromRight 0.75s cubic-bezier(0.22,1,0.36,1) both;
+  animation-delay: 0.1s;
+}
+/* photo side fades in from the left */
+.hero-split-photo {
+  animation: fadeInFromLeft 0.75s cubic-bezier(0.22,1,0.36,1) both;
+  animation-delay: 0.25s;
+}
+/* badges stagger up */
+.hero-badge-item {
+  animation: fadeInUp 0.5s ease both;
+}
+.hero-badge-item:nth-child(1) { animation-delay: 0.55s; }
+.hero-badge-item:nth-child(2) { animation-delay: 0.65s; }
+.hero-badge-item:nth-child(3) { animation-delay: 0.75s; }
+.hero-badge-item:nth-child(4) { animation-delay: 0.85s; }
+
+/* ===== LIGHT THEME: override dark sec-mid sections ===== */
+.sec-mid {
+  background: #f4f7fb !important;
+  color: var(--navy) !important;
+}
+.sec-mid .sec-title,
+.sec-mid .sec-sub,
+.sec-mid h2,
+.sec-mid h3,
+.sec-mid p {
+  color: var(--navy) !important;
+}
+.sec-mid .pre-label {
+  color: var(--orange) !important;
+  background: rgba(232,101,10,0.08) !important;
+}
+
+/* Service cards - light */
+.service-card {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(13,27,42,0.09) !important;
+  color: var(--navy) !important;
+  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+}
+.service-card h3,
+.service-card p {
+  color: var(--navy) !important;
+}
+
+/* How-to steps - light */
+.how-step,
+.how-card {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(13,27,42,0.09) !important;
+  color: var(--navy) !important;
+  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+}
+.how-step strong,
+.how-step p,
+.how-card strong,
+.how-card p {
+  color: var(--navy) !important;
+}
+.how-step .step-num,
+.how-num {
+  background: var(--orange) !important;
+  color: #fff !important;
+}
+
+/* FAQ - light */
+.faq-item,
+.faq-q,
+.faq-a {
+  background: #ffffff !important;
+  color: var(--navy) !important;
+  border-color: rgba(13,27,42,0.1) !important;
+}
+.faq-q {
+  border-bottom: 1px solid rgba(13,27,42,0.1) !important;
+}
+
+/* Why us cards - light */
+.why-card,
+.why-item {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(13,27,42,0.09) !important;
+  color: var(--navy) !important;
+  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+}
+.why-card h3,
+.why-card p,
+.why-item h3,
+.why-item p {
+  color: var(--navy) !important;
+}
+
+/* Contact section stays dark (intentional) - override back */
+#contact.sec-mid {
+  background: var(--navy) !important;
+  color: var(--white) !important;
+}
+#contact.sec-mid .sec-title,
+#contact.sec-mid .sec-sub,
+#contact.sec-mid h2,
+#contact.sec-mid p,
+#contact.sec-mid label {
+  color: var(--white) !important;
+}
+#contact.sec-mid .pre-label {
+  color: var(--orange) !important;
+}
+
+/* Audience section - keep light */
+#audience {
+  background: #ffffff !important;
+}
+
+/* Gallery - white bg */
+#gallery {
+  background: #ffffff !important;
+}
+#gallery .sec-title,
+#gallery .sec-sub,
+#gallery h2 {
+  color: var(--navy) !important;
+}
+#gallery .pre-label {
+  color: var(--orange) !important;
+}
+
+
+/* Hero grid: photo on LEFT, text on RIGHT (override RTL column order) */
+.hero-split {
+  direction: ltr !important;
+}
+.hero-split-text {
+  direction: rtl;
+}
+
 </style>
     <link rel="icon" href="/favicon.ico">
   <script type="application/ld+json">
@@ -1608,7 +1761,6 @@ html.a11y-contrast #a11y-panel {
 
 <!-- HERO -->
 <section class="hero-split" aria-labelledby="hero-heading">
-  <div class="hero-split-photo" role="img" aria-label="עובד סנפלינג מבצע עבודת גובה על חזית בניין"></div>
   <div class="hero-split-text">
     <p class="hero-eyebrow">מורשה ומבוטח &middot; מחדרה עד גדרה</p>
     <h1 id="hero-heading">
@@ -1671,6 +1823,7 @@ html.a11y-contrast #a11y-panel {
       </a>
     </div>
   </div>
+  <div class="hero-split-photo" role="img" aria-label="עובד סנפלינג מבצע עבודת גובה על חזית בניין"></div>
 </section>
 
 <!-- INFO STRIP -->
@@ -2202,3 +2355,4 @@ function resetA11y() {
 
 </body>
 </html>
+
