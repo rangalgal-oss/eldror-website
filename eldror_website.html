@@ -283,7 +283,7 @@ nav {
 .hero-lead {
   font-size: 1.1rem;
   color: var(--gray2);
-  margin-block-end: 2.5rem;
+  margin-block-end: 1.2rem;
   max-width: 500px;
   font-weight: 300;
 }
@@ -926,6 +926,107 @@ html.a11y-contrast #a11y-panel {
     padding-right: 1.4rem;
   }
 
+
+  /* ===== HERO IMPROVEMENTS ===== */
+  .hero-h1-question {
+    display: block;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.01em;
+    margin-block-end: 0.4rem;
+    animation: fadeSlideUp 0.6s ease both;
+  }
+  .hero-h1-answer {
+    display: block;
+    font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.15;
+    animation: fadeSlideUp 0.6s 0.15s ease both;
+  }
+  .hero-h1-answer em {
+    color: var(--orange);
+    font-style: normal;
+  }
+  .hero-lead {
+    animation: fadeSlideUp 0.6s 0.25s ease both;
+  }
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    animation: fadeSlideUp 0.6s 0.35s ease both;
+  }
+  .hero-trust li {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.82);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .hero-trust li::first-letter {
+    color: var(--orange);
+  }
+  .hero-btns {
+    animation: fadeSlideUp 0.6s 0.4s ease both;
+  }
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== WHY MINI SECTION ===== */
+  .why-mini {
+    background: #f7f9fc;
+    padding: 3rem 6%;
+    border-bottom: 1px solid #e8edf2;
+  }
+  .why-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .why-mini-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.4rem 1.2rem;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e4e9f0;
+    text-align: right;
+    direction: rtl;
+  }
+  .why-mini-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    margin-block-end: 0.2rem;
+  }
+  .why-mini-card strong {
+    font-size: 0.97rem;
+    font-weight: 700;
+    color: #1a2a3a;
+    line-height: 1.3;
+  }
+  .why-mini-card p {
+    font-size: 0.88rem;
+    color: #5a6a7a;
+    line-height: 1.6;
+    margin: 0;
+  }
+  @media (max-width: 640px) {
+    .why-mini { padding: 2rem 5%; }
+    .why-mini-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+    .why-mini-card { padding: 1rem; }
+  }
+
 </style>
     <link rel="icon" href="/favicon.ico">
   <script type="application/ld+json">
@@ -1029,18 +1130,32 @@ html.a11y-contrast #a11y-panel {
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-bg" role="img" aria-label="עובד סנפלינג על חזית בניין"></div>
     <div class="hero-content">
-      <div class="hero-badge" aria-hidden="true">✓ מורשה ומבוטח · תל אביב וגוש דן</div>
-      <h1 id="hero-heading">עבודות גובה<br><span>בטוחות ומדויקות</span><br>בסנפלינג</h1>
-      <p class="hero-lead">ניקוי חזיתות, איטום, צביעה ותיקונים — בכל גובה, בכל מבנה. מעל 30 שנות ניסיון, ציוד מקצועי, תוצאות ללא פשרות.</p>
+      <div class="hero-badge" aria-hidden="true">✓ מורשה ומבוטח &nbsp;·&nbsp; תל אביב, גוש דן והמרכז</div>
+      <h1 id="hero-heading">
+        <span class="hero-h1-question">נזילות? רטיבות? בעיות מעטפת?</span>
+        <span class="hero-h1-answer">פותרים את זה<br>בלי פיגומים ובלי כאב ראש</span>
+      </h1>
+      <p class="hero-lead">26 שנות ניסיון בתיקוני נזילות, שיקום מעטפת מבנים ועבודות סנפלינג מורכבות — במהירות, בבטיחות ובלי להעמיס על הבניין.</p>
+      <ul class="hero-trust" aria-label="יתרונות עיקריים">
+        <li>✓ 26 שנות ניסיון</li>
+        <li>✓ עבודה ללא פיגומים</li>
+        <li>✓ אחריות מקצועית</li>
+        <li>✓ פרטי ומסחרי</li>
+      </ul>
       <div class="hero-btns">
-        <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94" class="btn-primary" aria-label="שלח הודעת וואטסאפ לקבלת הצעת מחיר">
-          💬 קבל הצעת מחיר
+        <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8"
+           class="btn-primary"
+           target="_blank" rel="noopener"
+           aria-label="שלחו תמונה וקבלו הערכה בוואטסאפ">
+          📲 שלחו תמונה וקבלו הערכה
         </a>
-        <a href="#services" class="btn-outline">השירותים שלנו</a>
+        <a href="tel:+972522221120" class="btn-outline" aria-label="התקשרו עכשיו לייעוץ">
+          📞 דברו איתנו עכשיו
+        </a>
       </div>
       <div class="hero-stats" aria-label="נתוני חברה">
         <div>
-          <div class="stat-num" aria-label="30 שנות ניסיון">30+</div>
+          <div class="stat-num" aria-label="26 שנות ניסיון">26+</div>
           <div class="stat-label">שנות ניסיון</div>
         </div>
         <div>
@@ -1051,6 +1166,33 @@ html.a11y-contrast #a11y-panel {
           <div class="stat-num" aria-label="ביטוח מלא">100%</div>
           <div class="stat-label">מבוטח ומורשה</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US MINI -->
+  <section class="why-mini" aria-labelledby="why-mini-heading">
+    <h2 id="why-mini-heading" class="sr-only">למה לעבוד דווקא איתנו</h2>
+    <div class="why-mini-grid">
+      <div class="why-mini-card">
+        <span class="why-mini-icon" aria-hidden="true">🏗️</span>
+        <strong>ניסיון מעשי של עשרות שנים</strong>
+        <p>מאות פרויקטים של איטום, שיקום ועבודות גובה בבניינים פרטיים ומסחריים ברחבי המרכז.</p>
+      </div>
+      <div class="why-mini-card">
+        <span class="why-mini-icon" aria-hidden="true">🪢</span>
+        <strong>פתרונות ללא פיגומים</strong>
+        <p>עבודה בסנפלינג — מהירה יותר, זולה יותר, ובלי לחסום את הכניסה לבניין.</p>
+      </div>
+      <div class="why-mini-card">
+        <span class="why-mini-icon" aria-hidden="true">🎯</span>
+        <strong>עבודה נקייה ומדויקת</strong>
+        <p>פועלים בצורה מסודרת, מפרטים לפני ואחרי, ומשאירים את הסביבה נקייה.</p>
+      </div>
+      <div class="why-mini-card">
+        <span class="why-mini-icon" aria-hidden="true">🤝</span>
+        <strong>מענה מקצועי ואמין</strong>
+        <p>אבחון ישיר, הצעת מחיר שקופה, ועמידה בלוחות זמנים — ללא הפתעות.</p>
       </div>
     </div>
   </section>
