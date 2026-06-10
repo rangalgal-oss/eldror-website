@@ -95,6 +95,9 @@ img{max-width:100%;display:block}
 .alert-box li::before{content:"✓ ";color:var(--orange);font-weight:700}
 /* RESPONSIVE */
 @media(max-width:640px){.nav{padding:0.75rem 1rem}.hero{padding:3rem 1rem 2.5rem}.sec,.sec-mid{padding:2.5rem 1rem}.cta-strip{padding:2rem 1rem}}
+.city-links{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.city-link{border:1px solid rgba(255,255,255,0.15);padding:.4rem 1rem;border-radius:3px;font-size:.82rem;text-decoration:none;color:var(--gray);transition:all .2s}
+.city-link:hover{border-color:var(--orange);color:var(--orange)}
 </style>
   <script type="application/ld+json">
 {
@@ -247,6 +250,23 @@ img{max-width:100%;display:block}
 </section>
 
 <section class="sec sec-mid">
+
+  <!-- CITY GRID -->
+  <div class="sec-mid">
+    <div class="sec">
+      <span class="pre-label">לפי עיר</span>
+      <h2 class="sec-title">שירות מרזבים לפי עיר</h2>
+      <p class="sec-sub">דפי מידע מפורטים עם מחירים, זמנים ושאלות נפוצות לכל עיר.</p>
+      <div class="city-links" style="margin-top:1.2rem">
+        <a href="marzavim-tel-aviv.html" class="city-link">תל אביב</a>
+        <a href="marzavim-ramat-gan.html" class="city-link">רמת גן</a>
+        <a href="marzavim-givatayim.html" class="city-link">גבעתיים</a>
+        <a href="marzavim-rishon-lezion.html" class="city-link">ראשון לציון</a>
+        <a href="binyan-mesukan.html" class="city-link" style="border-color:rgba(232,101,10,0.4)">⚠️ בניין מסוכן?</a>
+      </div>
+    </div>
+  </div>
+
   <span class="pre-label">שאלות נפוצות</span>
   <h2 class="sec-title">מה רוצים לדעת על מרזבים בסנפלינג</h2>
   <div class="faq">
