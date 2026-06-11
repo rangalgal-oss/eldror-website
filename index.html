@@ -48,7 +48,11 @@
     {"@type": "City", "name": "רמת גן"},
     {"@type": "City", "name": "גבעתיים"},
     {"@type": "City", "name": "בני ברק"},
-    {"@type": "City", "name": "פתח תקווה"}
+    {"@type": "City", "name": "פתח תקווה"},
+    {"@type": "City", "name": "חולון"},
+    {"@type": "City", "name": "בת ים"},
+    {"@type": "City", "name": "ראשון לציון"},
+    {"@type": "City", "name": "נתניה"}
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -59,7 +63,9 @@
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "צביעת חזיתות"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תיקון סדקים ופגמים"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "תיקון נזקי הדף וחזיתות"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ריסוס ואיטום חיצוני"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ריסוס ואיטום חיצוני"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "התקנת מרזבים בסנפלינג"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "הסרת צו בניין מסוכן"}}
     ]
   },
   "sameAs": ["https://www.facebook.com/eldrorbagova/"],
@@ -1859,7 +1865,7 @@ html.a11y-contrast #a11y-panel {
   </div>
   <div class="info-strip-item">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-    <div><strong>שעות פעילות</strong><span>א׳–ה׳ 07:00–18:00</span></div>
+    <div><strong>שעות פעילות</strong><span>א׳–ו׳ 07:00–18:00</span></div>
   </div>
   <div class="info-strip-item">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
@@ -2205,6 +2211,9 @@ html.a11y-contrast #a11y-panel {
             <option>איטום גגות / חזיתות</option>
             <option>צביעת חזיתות</option>
             <option>תיקון סדקים</option>
+            <option>תיקון נזקי הדף</option>
+            <option>התקנת מרזבים</option>
+            <option>הסרת צו בניין מסוכן</option>
             <option>ניקוי חלונות</option>
             <option>אחר</option>
           </select>
@@ -2230,7 +2239,7 @@ html.a11y-contrast #a11y-panel {
       <li>ניגודיות צבעים עומדת ביחס 4.5:1 לפחות</li>
       <li>האתר כולל כפתור נגישות (Alt+A) לשינוי ניגודיות וגודל טקסט</li>
     </ul>
-    <p>לפניות בנושא נגישות: <a href="tel:+972522221120" dir="ltr" aria-label="התקשר לרכז הנגישות"><span dir="ltr">0522-221-120</span></a> · תאריך עדכון אחרון: מאי 2025</p>
+    <p>לפניות בנושא נגישות: <a href="tel:+972522221120" dir="ltr" aria-label="התקשר לרכז הנגישות"><span dir="ltr">0522-221-120</span></a> · תאריך עדכון אחרון: יוני 2026</p>
   </section>
 
 </main><!-- /main -->
@@ -2265,7 +2274,7 @@ html.a11y-contrast #a11y-panel {
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <p>© 2025 אלדרור — עבודות גובה בסנפלינג | <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a></p>
+  <p>© 2026 אלדרור — עבודות גובה בסנפלינג | <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a></p>
   <p>
     <a href="https://www.facebook.com/eldrorbagova/" target="_blank" rel="noopener" aria-label="פייסבוק של אלדרור (נפתח בחלון חדש)">פייסבוק</a>
     &nbsp;·&nbsp;
@@ -2392,447 +2401,3 @@ function resetA11y() {
 
 </body>
 </html>
-
-
-, ''
-
-  </section>
-
-  
-  <!-- HOW TO START -->
-  <section id="how" class="sec sec-mid" aria-labelledby="how-heading">
-    <div class="how-wrap">
-      <span class="pre-label" aria-hidden="true">בואו נתחיל</span>
-      <h2 id="how-heading">איך מתחילים?</h2>
-      <div class="how-steps">
-        <div class="how-step">
-          <h3>שולחים תמונות ופרטים בוואטסאפ</h3>
-          <p>שלחו לנו תמונות של החזית, הגג או האזור הבעייתי, יחד עם עיר ומספר קומות.</p>
-        </div>
-        <div class="how-step">
-          <h3>מקבלים אבחון ראשוני</h3>
-          <p>נבין אם נדרש ניקוי, איטום, תיקון סדקים או עבודת גובה אחרת.</p>
-        </div>
-        <div class="how-step">
-          <h3>מקבלים הצעת מחיר מסודרת</h3>
-          <p>נשלח הצעת מחיר ברורה, עם פירוט העבודה, זמני ביצוע ותנאי אחריות.</p>
-        </div>
-        <div class="how-step">
-          <h3>מבצעים עבודה בבטיחות מלאה</h3>
-          <p>צוות מנוסה מגיע לשטח עם ציוד סנפלינג מקצועי וביטוח מתאים.</p>
-        </div>
-      </div>
-      <div class="how-cta-wrap">
-        <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94"
-           class="btn btn-primary"
-           target="_blank"
-           rel="noopener"
-           aria-label="שלחו תמונות בוואטסאפ לקבלת הצעת מחיר">
-          📲 שלחו תמונות בוואטסאפ
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- WHO IS IT FOR -->
-  <section id="audience" class="sec" aria-labelledby="audience-heading">
-    <span class="pre-label" aria-hidden="true">הלקוחות שלנו</span>
-    <h2 id="audience-heading">למי השירות מתאים?</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏢</span>
-        <h3>ועדי בתים</h3>
-        <p>ניהול תחזוקה שוטפת של חזיתות וגגות — בלי להטריח את הדיירים.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🔧</span>
-        <h3>חברות ניהול ואחזקה</h3>
-        <p>שותף מקצועי לעבודות גובה שדורשות ציוד סנפלינג וביטוח ייעודי.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏬</span>
-        <h3>בנייני משרדים ומסחר</h3>
-        <p>ניקוי וצביעת חזיתות זכוכית ובטון — עם מינימום הפרעה לפעילות השוטפת.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏗️</span>
-        <h3>קבלנים ויזמים</h3>
-        <p>השלמת עבודות גמר בגובה — איטום, גינון אנכי, ותיקונים לפני מסירה.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">💧</span>
-        <h3>בעלי דירות עם בעיות רטיבות</h3>
-        <p>אבחון ואיטום מדויק של נקודות חדירת מים — גם בקומות גבוהות.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🌪️</span>
-        <h3>מבנים אחרי נזקי מזג אוויר</h3>
-        <p>תיקון מהיר של סדקים, ציפוי קורוזיה ונזקי הדף לאחר סופות.</p>
-      </div>
-    </div>
-  </section>
-
-<!-- GALLERY -->
-  <section id="gallery" class="sec" aria-labelledby="gallery-heading">
-    <span class="pre-label" aria-hidden="true">מהשטח</span>
-    <h2 id="gallery-heading" class="sec-title">עבודות שביצענו</h2>
-    <p class="sec-sub">חלק מהפרויקטים שביצענו בשנים האחרונות — ניקוי, איטום וצביעת חזיתות בניינים.</p>
-    <div class="gallery-grid" role="list" aria-label="גלריית עבודות">
-      <img src="gallery_photos/photo_07_895189977194393.jpg" alt="עבודות גובה בסנפלינג על חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_18_1242719805774740.jpg" alt="עובד אלדרור בסנפלינג על חזית בניין גבוה" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_08_895189970527727.jpg" alt="צוות אלדרור בעבודת גובה על בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_17_1267250763321644.jpg" alt="עובדי אלדרור על גג בניין מסחרי — עבודות סנפלינג" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1316290298417690.jpg" alt="עבודות חבלים וסנפלינג על חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719815774739.jpg" alt="עובד סנפלינג על קיר חיצוני של בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719855774735.jpg" alt="ירידה בחבלים על חזית בניין — אלדרור" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_01_913049918741732.jpg" alt="עובד סנפלינג על חזית בניין — ניקוי חזיתות" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_02_903761689670555.jpg" alt="צוות אלדרור בעבודת שיפוץ חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_03_903761683003889.jpg" alt="עבודות גובה — שיפוץ ואיטום חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_04_903761666337224.jpg" alt="עבודות סנפלינג — ניקוי ואיטום חזיתות" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_06_903761636337227.jpg" alt="צוות אלדרור על חזית בניין — ריסוס ואיטום" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719889108065.jpg" alt="חזית בניין לאחר עבודות ניקוי ואיטום" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_05_903761656337225.jpg" alt="בניין לאחר עבודות שיפוץ ואיטום חזיתות" loading="lazy" role="listitem">
-    </div>
-  </section>
-
-  <!-- WHY US -->
-  <section id="why" class="sec sec-mid" aria-labelledby="why-heading">
-    <div class="why-wrap">
-      <figure class="why-visual">
-        <img class="why-img"
-          src="gallery_photos/photo_09_1440161506030568.jpg"
-          alt="צוות אלדרור בעבודת סנפלינג על חזית בניין גבוה"
-          loading="lazy">
-        <figcaption class="why-badge" aria-label="30 שנות ניסיון">
-          <div class="num">30+</div>
-          <div class="lbl">שנות ניסיון</div>
-        </figcaption>
-      </figure>
-      <div>
-        <span class="pre-label" aria-hidden="true">למה לבחור בנו</span>
-        <h2 id="why-heading" class="sec-title">ניסיון שמדבר<br>בעד עצמו</h2>
-        <p class="sec-sub">מעל שלושה עשורים של עבודות גובה — בטיחות ומקצועיות הם לא מילים, הם אורח חיים.</p>
-        <ul class="why-points" aria-label="יתרונות החברה">
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>ציוד מתקדם ובטוח</h3>
-              <p>ציוד סנפלינג מקצועי ומוסמך, עמידה בכל תקנות הבטיחות הישראליות.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>ביטוח מלא</h3>
-              <p>ביטוח צד שלישי מלא, ביטוח עבודות ואחריות על כל פרויקט.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>זמינות ומהירות תגובה</h3>
-              <p>מגיבים תוך שעות, הצעת מחיר מהירה, מתחילים עבודה בהקדם האפשרי.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>מחירים שקופים</h3>
-              <p>הצעות מחיר ברורות ללא הפתעות — מה שסיכמנו, זה מה שמשלמים.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- FAQ -->
-  <section id="faq" class="sec sec-mid" aria-labelledby="faq-heading">
-    <div class="faq-wrap">
-      <span class="pre-label" aria-hidden="true">שאלות ותשובות</span>
-      <h2 id="faq-heading">שאלות נפוצות</h2>
-      <dl class="faq-list">
-        <div class="faq-item">
-          <dt>מה זה בעצם נזקי הדף ומתי צריך לטפל בזה?</dt>
-          <dd>הדף נגרם מפיצוץ, רעידת אדמה או אירוע ביטחוני ומשאיר סדקים, שברים ונפילות טיח בחזית הבניין. חשוב לטפל מהר — נזק שלא מטופל מתרחב, מאפשר חדירת מים ומסכן את שלמות החזית.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם אפשר לבצע עבודות גובה בלי פיגומים?</dt>
-          <dd>כן. בסנפלינג ניתן להגיע לכל נקודה בחזית הבניין — גם בגבהים קיצוניים — בלי פיגומים, מה שחוסך עלויות ומקצר משמעותית את זמן הביצוע.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם אתם עובדים עם חברות ביטוח לנזקי מלחמה?</dt>
-          <dd>כן. אנחנו מלווים תהליכי תיעוד ועובדים עם בעלי דירות ומנהלי ועדי בתים מול חברות הביטוח — כולל אבחון, הצעת מחיר ודוח עבודה מסודר.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>באילו אזורים אתם פועלים?</dt>
-          <dd>תל אביב, גוש דן, רמת גן, גבעתיים, בני ברק, פתח תקווה ואזור המרכז. לפניות מאזורים אחרים — מוזמנים לשאול.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>כמה זמן לוקח תיקון נזקי הדף בבניין?</dt>
-          <dd>תלוי בהיקף הנזק — תיקון נקודתי עשוי להסתיים תוך יום-יומיים, בעוד שיקום מלא של חזית יכול לקחת מספר ימים. אנחנו מספקים הערכה מדויקת לאחר הסתכלות ראשונית.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>איך מקבלים הצעת מחיר?</dt>
-          <dd>שלחו תמונות ופרטים בוואטסאפ — נחזור עם אבחון ראשוני והצעה מסודרת, בדרך כלל תוך שעות ספורות.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם יש אחריות על העבודה?</dt>
-          <dd>בהחלט. ניתנת אחריות לפי סוג העבודה והחומרים בהם נעשה שימוש. פרטי האחריות מצוינים בהצעת המחיר.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-<!-- CONTACT -->
-  <section id="contact" class="sec" aria-labelledby="contact-heading">
-    <span class="pre-label" aria-hidden="true">בואו נדבר</span>
-    <h2 id="contact-heading" class="sec-title">צרו קשר לקבלת<br>הצעת מחיר</h2>
-    <div class="contact-wrap">
-      <div>
-        <p class="sec-sub">השאירו פרטים ונחזור אליכם תוך שעות ספורות עם הצעת מחיר מותאמת לצרכים שלכם.</p>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📞</div>
-            <div>
-              <span class="lbl">טלפון</span>
-              <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">💬</div>
-            <div>
-              <span class="lbl">וואטסאפ</span>
-              <a href="https://wa.me/972522221120" aria-label="שלח הודעת וואטסאפ">שלח הודעה עכשיו</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📍</div>
-            <div>
-              <span class="lbl">אזור פעילות</span>
-              <strong>תל אביב, גוש דן והמרכז</strong>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">🕐</div>
-            <div>
-              <span class="lbl">שעות פעילות</span>
-              <strong>ימים א–ו · <bdo dir="ltr">07:00–18:00</bdo></strong>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)" novalidate aria-label="טופס פנייה">
-        <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
-        <div class="form-row">
-          <div class="field-wrap">
-            <label for="name">שם מלא <span aria-hidden="true">*</span></label>
-            <input id="name" type="text" placeholder="ישראל ישראלי" required aria-required="true" aria-describedby="name-err" autocomplete="name">
-            <span id="name-err" class="field-error" role="alert">נא להזין שם מלא</span>
-          </div>
-          <div class="field-wrap">
-            <label for="phone">טלפון <span aria-hidden="true">*</span></label>
-            <input id="phone" type="tel" placeholder="05X-XXX-XXXX" required aria-required="true" dir="ltr" aria-describedby="phone-err" autocomplete="tel" inputmode="tel">
-            <span id="phone-err" class="field-error" role="alert">נא להזין מספר טלפון</span>
-          </div>
-        </div>
-        <div class="field-wrap">
-          <label for="service">סוג העבודה</label>
-          <select id="service" aria-label="בחר סוג עבודה">
-            <option value="" disabled selected>בחר שירות</option>
-            <option>ניקוי חזיתות</option>
-            <option>איטום גגות / חזיתות</option>
-            <option>צביעת חזיתות</option>
-            <option>תיקון סדקים</option>
-            <option>ניקוי חלונות</option>
-            <option>אחר</option>
-          </select>
-        </div>
-        <div class="field-wrap">
-          <label for="message">פרטים נוספים</label>
-          <textarea id="message" placeholder="כמה קומות? באיזו עיר? תיאור קצר של העבודה..." aria-describedby="message-hint"></textarea>
-          <span id="message-hint" style="font-size:0.78rem; color:var(--gray);">אופציונלי — יעזור לנו לתת הצעה מדויקת יותר</span>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">שלח פנייה ←</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- ACCESSIBILITY STATEMENT — IS 5568 חובה -->
-  <section id="negishot" class="sec" aria-labelledby="negishot-heading">
-    <h2 id="negishot-heading">הצהרת נגישות</h2>
-    <p>אנו באלדרור עבודות גובה מחויבים להנגשת אתר זה לאנשים עם מוגבלויות, בהתאם לתקן הישראלי IS 5568 ולהנחיות <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 ברמה AA.</p>
-    <ul>
-      <li>האתר תומך בניווט מלא באמצעות מקלדת</li>
-      <li>האתר תומך בקוראי מסך (NVDA, JAWS, VoiceOver)</li>
-      <li>תמונות מלוות בטקסט חלופי</li>
-      <li>ניגודיות צבעים עומדת ביחס 4.5:1 לפחות</li>
-      <li>האתר כולל כפתור נגישות (Alt+A) לשינוי ניגודיות וגודל טקסט</li>
-    </ul>
-    <p>לפניות בנושא נגישות: <a href="tel:+972522221120" dir="ltr" aria-label="התקשר לרכז הנגישות"><span dir="ltr">0522-221-120</span></a> · תאריך עדכון אחרון: מאי 2025</p>
-  </section>
-
-</main><!-- /main -->
-
-<!-- FACEBOOK BANNER -->
-<section style="padding:0;background:#1877f2;overflow:hidden;">
-  <a href="https://www.facebook.com/eldrorbagova/" target="_blank" rel="noopener"
-     aria-label="עמוד הפייסבוק של אלדרור — לחץ לביקור (נפתח בחלון חדש)"
-     style="display:block;position:relative;">
-    <img src="gallery_photos/photo_15_1355036054543114.jpg"
-         alt="אלדרור עבודות גובה — עמוד פייסבוק"
-         style="width:100%;height:220px;object-fit:cover;display:block;opacity:0.75;">
-    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-                background:rgba(24,119,242,0.62);gap:22px;flex-wrap:wrap;padding:1rem;">
-      <!-- לוגו עגול מהפייסבוק -->
-      <img src="gallery_photos/logo_eldror.jpg"
-           alt="לוגו אלדרור עבודות גובה"
-           style="width:86px;height:86px;border-radius:50%;border:3px solid #fff;object-fit:cover;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.35);">
-      <!-- טקסט + אייקון פייסבוק -->
-      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-        <span style="color:#fff;font-size:1.5rem;font-weight:800;font-family:Assistant,sans-serif;text-shadow:0 1px 4px rgba(0,0,0,0.4);letter-spacing:0.3px;">אלדרור עבודות גובה</span>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
-          <span style="color:rgba(255,255,255,0.92);font-size:1rem;font-family:Assistant,sans-serif;font-weight:600;">עקבו אחרינו בפייסבוק</span>
-        </div>
-      </div>
-    </div>
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer role="contentinfo">
-  <p>© 2025 אלדרור — עבודות גובה בסנפלינג | <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a></p>
-  <p>
-    <a href="https://www.facebook.com/eldrorbagova/" target="_blank" rel="noopener" aria-label="פייסבוק של אלדרור (נפתח בחלון חדש)">פייסבוק</a>
-    &nbsp;·&nbsp;
-    <a href="#negishot">הצהרת נגישות</a>
-  </p>
-</footer>
-
-<!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8" class="wa-float" target="_blank" rel="noopener" aria-label="שלח הודעת וואטסאפ לאלדרור">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
-
-<!-- ACCESSIBILITY WIDGET -->
-<button id="a11y-trigger" aria-label="כלי נגישות (Alt+A)" aria-expanded="false" aria-controls="a11y-panel" title="נגישות">
-  ♿
-</button>
-
-<div id="a11y-panel" role="dialog" aria-label="אפשרויות נגישות" aria-hidden="true">
-  <h3>אפשרויות נגישות</h3>
-  <button class="a11y-btn" id="btn-contrast" aria-pressed="false" onclick="toggleA11y('a11y-contrast','btn-contrast')">ניגודיות גבוהה</button>
-  <button class="a11y-btn" id="btn-text" aria-pressed="false" onclick="toggleA11y('a11y-text-large','btn-text')">הגדלת טקסט</button>
-  <button class="a11y-btn" id="btn-links" aria-pressed="false" onclick="toggleA11y('a11y-links','btn-links')">הדגשת קישורים</button>
-  <button class="a11y-btn" id="btn-motion" aria-pressed="false" onclick="toggleA11y('a11y-reduce-motion','btn-motion')">הפחתת אנימציות</button>
-  <button class="a11y-btn" onclick="resetA11y()">אפס הכל</button>
-</div>
-
-<script>
-/* ── FORM ── */
-function handleSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('name');
-  const phone = document.getElementById('phone');
-  const nameErr = document.getElementById('name-err');
-  const phoneErr = document.getElementById('phone-err');
-  const status = document.getElementById('form-status');
-  let valid = true;
-
-  [name, phone].forEach(f => { f.setAttribute('aria-invalid','false'); });
-  [nameErr, phoneErr].forEach(e => e.classList.remove('show'));
-
-  if (!name.value.trim()) {
-    name.setAttribute('aria-invalid','true');
-    nameErr.classList.add('show');
-    name.focus();
-    valid = false;
-  }
-  if (!phone.value.trim()) {
-    phone.setAttribute('aria-invalid','true');
-    phoneErr.classList.add('show');
-    if (valid) phone.focus();
-    valid = false;
-  }
-  if (!valid) return;
-
-  const service = document.getElementById('service').value;
-  const msg = document.getElementById('message').value;
-  const txt = `שלום, שמי ${name.value}, טלפון: ${phone.value}.${service ? '\nסוג עבודה: '+service : ''}${msg ? '\n'+msg : ''}`;
-  window.open('https://wa.me/972522221120?text=' + encodeURIComponent(txt), '_blank');
-  status.textContent = 'תודה! מיד תועבר לוואטסאפ לסיום הפנייה.';
-  e.target.reset();
-}
-
-/* ── ACCESSIBILITY WIDGET ── */
-const trigger = document.getElementById('a11y-trigger');
-const panel = document.getElementById('a11y-panel');
-
-trigger.addEventListener('click', () => {
-  const open = panel.classList.toggle('open');
-  trigger.setAttribute('aria-expanded', open);
-  panel.setAttribute('aria-hidden', !open);
-  if (open) panel.querySelector('.a11y-btn').focus();
-});
-
-document.addEventListener('keydown', e => {
-  if (e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey && e.code === 'KeyA') {
-    e.preventDefault();
-    trigger.click();
-  }
-  if (e.key === 'Escape' && panel.classList.contains('open')) {
-    panel.classList.remove('open');
-    trigger.setAttribute('aria-expanded','false');
-    panel.setAttribute('aria-hidden','true');
-    trigger.focus();
-  }
-});
-
-function toggleA11y(cls, btnId) {
-  const active = document.documentElement.classList.toggle(cls);
-  const btn = document.getElementById(btnId);
-  btn.setAttribute('aria-pressed', active);
-}
-
-function resetA11y() {
-  ['a11y-contrast','a11y-text-large','a11y-links','a11y-reduce-motion']
-    .forEach(c => document.documentElement.classList.remove(c));
-  ['btn-contrast','btn-text','btn-links','btn-motion']
-    .forEach(id => document.getElementById(id).setAttribute('aria-pressed','false'));
-}
-</script>
-
-
-<!-- MOBILE BOTTOM CTA BAR -->
-<div class="mobile-cta-bar" role="navigation" aria-label="כפתורי פנייה מהירים">
-  <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94"
-     class="cta-wa"
-     target="_blank" rel="noopener"
-     aria-label="שלח הודעת וואטסאפ">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-    וואטסאפ
-  </a>
-  <a href="tel:+972522221120"
-     class="cta-call"
-     aria-label="התקשר 0522-221-120">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
-      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.62 10.1 19.79 19.79 0 01.54 1.5 2 2 0 012.53 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.09 6.09l1.27-.88a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-    </svg>
-    התקשר
-  </a>
-</div>
-
-</body>
-</html>
-
-
