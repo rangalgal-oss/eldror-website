@@ -17,15 +17,15 @@
 <meta property="og:description" content="מומחים בעבודות גובה בסנפלינג. ניקוי, איטום וצביעת חזיתות. ביטוח מלא. תל אביב והמרכז.">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="אלדרור עבודות גובה">
-    <meta property="og:image" content="https://eldror.co.il/gallery_photos/banner_new.png">
-    <meta property="og:image:width" content="1983">
-    <meta property="og:image:height" content="405">
+<meta property="og:image" content="https://eldror.co.il/gallery_photos/banner_new.png">
+<meta property="og:image:width" content="1983">
+<meta property="og:image:height" content="405">
 
 <!-- Twitter / WhatsApp -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="אלדרור — עבודות גובה בסנפלינג">
 <meta name="twitter:description" content="30+ שנות ניסיון בעבודות גובה. ניקוי, איטום וצביעת חזיתות. 0522-221-120">
-    <meta name="twitter:image" content="https://eldror.co.il/gallery_photos/banner_new.png">
+<meta name="twitter:image" content="https://eldror.co.il/gallery_photos/banner_new.png">
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -79,1643 +79,588 @@
 }
 </script>
 
+<link rel="icon" href="/favicon.ico">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "האם אפשר לבצע עבודות גובה בלי פיגומים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן. במקרים רבים עבודת סנפלינג חוסכת את הצורך בפיגומים, מקצרת זמני ביצוע ומוזילה עלויות."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם אתם מבוטחים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "כן. העבודה מתבצעת עם ביטוח מתאים לעבודות גובה ולפי דרישות הבטיחות."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "באילו אזורים אתם עובדים?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "תל אביב, גוש דן, רמת גן, גבעתיים, בני ברק, פתח תקווה ואזור המרכז."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "איך מקבלים הצעת מחיר?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "אפשר לשלוח תמונות ופרטים בוואטסאפ, ואנחנו נחזור עם אבחון ראשוני והצעה מסודרת."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "אילו עבודות אפשר לבצע בסנפלינג?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ניקוי חזיתות, איטום, צביעה, תיקון סדקים, עבודות טיח, ניקוי חלונות ושיקום נקודתי של חזיתות."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "האם יש אחריות על העבודה?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "במקרים הרלוונטיים ניתנת אחריות לפי סוג העבודה, החומרים ותנאי השטח."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+/* ════════════════════════════════════════════════════════
+   ELDROR — VARIANT B: "ENTERPRISE CLEAN"
+   Light concrete, charcoal ink, single orange action color.
+   ════════════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:    #0d1b2a;
-  --navy2:   #152233;
-  --navy3:   #1e3044;
-  --orange:  #e8650a;
-  --orange2: #f07b28;
-  --light:   #f8f8f6;
-  --gray:    #8a9bb0;
-  --gray2:   #c5d0dc;
-  --white:   #ffffff;
-  --radius:  8px;
-  --font:    'Heebo', 'Assistant', sans-serif;
+  --paper:    #f6f5f2;   /* light concrete bg */
+  --card:     #ffffff;
+  --card-2:   #fbfaf8;
+  --line:     #e4e2dc;
+  --line-strong: #cfccc4;
+  --orange:   #e8590c;
+  --orange-deep: #cf4e08;
+  --ink:      #1a1a1e;
+  --ink-dim:  #5c5c60;
+  --ink-faint:#97968f;
+  --dark:     #16161a;
+  --mono:     'IBM Plex Mono', 'Courier New', monospace;
+  --sans:     'Heebo', system-ui, sans-serif;
+  --radius:   8px;
 }
 
 html { scroll-behavior: smooth; }
-
-/* נגישות — focus visible */
-:focus-visible {
-  outline: 3px solid var(--orange2);
-  outline-offset: 3px;
-  border-radius: 3px;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-
-/* דלג לתוכן — IS 5568 */
-.skip-link {
-  position: absolute;
-  inset-inline-start: -9999px;
-  top: 1rem;
-  background: var(--orange);
-  color: var(--white);
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius);
-  font-size: 0.95rem;
-  font-weight: 600;
-  z-index: 9999;
-  text-decoration: none;
-}
-.skip-link:focus { inset-inline-start: 1rem; }
 
 body {
-  font-family: var(--font);
-  font-size: 16px;
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
   line-height: 1.7;
-  word-spacing: 0.05em;
-  letter-spacing: normal;
-  background: var(--navy);
-  color: var(--white);
-  direction: rtl;
-  overflow-x: hidden;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
+img { max-width: 100%; display: block; }
+a { color: var(--orange); text-decoration: none; }
+a:hover { color: var(--orange-deep); }
+ul { list-style: none; }
 
-/* ═══ NAVBAR ═══ */
-nav {
-  position: fixed;
-  inset-block-start: 0;
-  inset-inline: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.9rem 2rem;
-  background: rgba(13,27,42,0.93);
-  backdrop-filter: blur(12px);
-  border-block-end: 1px solid rgba(232,101,10,0.18);
+.phone-number { direction: ltr; unicode-bidi: embed; font-family: var(--mono); letter-spacing: 0.02em; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--white);
-  word-spacing: 0;
-  letter-spacing: 0;
-  white-space: nowrap;
-}
-
-/* לוגו SVG מוטבע */
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-}
-
-.logo-word {
-  color: var(--white);
-  word-spacing: 0;
-  letter-spacing: 0;
-  white-space: nowrap;
-  display: inline;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links a {
-  color: var(--gray2);
-  font-size: 0.95rem;
-  font-weight: 400;
-  transition: color 0.2s;
-}
-.nav-links a:hover,
-.nav-links a:focus { color: var(--white); }
-
-.nav-cta {
-  background: var(--orange);
-  color: var(--white) !important;
-  padding: 0.5rem 1.25rem;
+.skip-link {
+  position: absolute; top: -48px; right: 16px;
+  background: var(--orange); color: #fff;
+  padding: 10px 18px; font-weight: 700; z-index: 300;
   border-radius: var(--radius);
-  font-weight: 600 !important;
-  transition: background 0.2s !important;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
-.nav-cta:hover, .nav-cta:focus { background: var(--orange2) !important; }
+.skip-link:focus { top: 12px; color: #fff; }
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
 
-/* ═══ HERO ═══ */
-.hero {
-  min-height: 80svh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 5rem 6% 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to left, rgba(13,27,42,0.97) 0%, rgba(13,27,42,0.82) 55%, rgba(13,27,42,0.35) 100%),
-    url('gallery_photos/hero_worker.jpg') center/cover no-repeat;
-}
-
-/* ═══ FACEBOOK COVER SECTION ═══ */
-.fb-cover-section {
-  position: relative;
-  margin-top: 62px;
-  background: var(--navy);
-}
-.fb-cover-img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  background: var(--navy);
-}
-.fb-avatar {
-  position: absolute;
-  bottom: 8px;
-  right: 12%;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 4px solid var(--navy);
-  object-fit: cover;
-  object-position: center;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 640px;
-  z-index: 1;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(232,101,10,0.14);
-  border: 1px solid rgba(232,101,10,0.38);
-  color: var(--orange2);
-  font-size: 0.83rem;
-  font-weight: 600;
-  padding: 0.4rem 1rem;
-  border-radius: 100px;
-  margin-block-end: 1.5rem;
-}
-
-.hero h1 {
-  font-size: clamp(2.4rem, 5vw, 3.9rem);
-  font-weight: 900;
-  line-height: 1.13;
-  color: var(--white);
-  margin-block-end: 1.25rem;
-}
-.hero h1 span { color: var(--orange); }
-
-.hero-lead {
-  font-size: 1.1rem;
-  color: var(--gray2);
-  margin-block-end: 1.2rem;
-  max-width: 500px;
-  font-weight: 300;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--orange);
-  color: var(--white);
-  padding: 0.9rem 2rem;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: var(--font);
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
-  text-decoration: none;
-}
-.btn-primary:hover, .btn-primary:focus { background: var(--orange2); transform: translateY(-1px); }
-
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  color: var(--white);
-  padding: 0.9rem 2rem;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  font-weight: 500;
-  border: 1px solid rgba(255,255,255,0.28);
-  transition: border-color 0.2s, background 0.2s;
-  text-decoration: none;
-}
-.btn-outline:hover, .btn-outline:focus { border-color: var(--white); background: rgba(255,255,255,0.07); }
-
-.hero-stats {
-  display: flex;
-  gap: 3rem;
-  margin-block-start: 3.5rem;
-  padding-block-start: 2.5rem;
-  border-block-start: 1px solid rgba(255,255,255,0.09);
-}
-
-.stat-num {
-  font-size: 2.1rem;
-  font-weight: 900;
-  color: var(--orange);
-  line-height: 1;
-}
-.stat-label {
-  font-size: 0.82rem;
-  color: var(--gray);
-  margin-block-start: 0.25rem;
-}
-
-/* ═══ SECTION LAYOUT ═══ */
-.sec { padding: 5rem 6%; }
-.sec-light { background: var(--light); color: #1a2a3a; }
-.sec-mid { background: var(--navy2); }
-
-.pre-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--orange);
-  margin-block-end: 0.75rem;
-  display: block;
-}
-.sec-light .pre-label { color: #b84500; }
-
-.sec-title {
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-block-end: 1rem;
-}
-
-.sec-sub {
-  font-size: 1rem;
-  max-width: 540px;
-  font-weight: 300;
-  opacity: 0.8;
-}
-
-/* ═══ BANNER ═══ */
-.banner-strip {
-  background: var(--orange);
-  padding: 0.75rem 6%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.banner-strip a {
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  border-block-end: 1px solid rgba(255,255,255,0.5);
-}
-
-/* ═══ SERVICES ═══ */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 1.25rem;
-  margin-block-start: 2.5rem;
-}
-
-.service-card {
-  background: var(--navy3);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 14px;
-  padding: 2rem;
-  transition: border-color 0.2s, transform 0.2s;
-}
-.service-card:hover, .service-card:focus-within {
-  border-color: rgba(232,101,10,0.45);
-  transform: translateY(-3px);
-}
-
-.service-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(232,101,10,0.13);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-block-end: 1.25rem;
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  aria-hidden: true;
-}
-
-.service-card h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--white);
-  margin-block-end: 0.5rem;
-}
-.service-card p {
-  font-size: 0.88rem;
-  color: var(--gray2);
-  font-weight: 300;
-  line-height: 1.65;
-}
-.card-link {
-  display: inline-block;
-  margin-block-start: 1rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--orange);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  transition: opacity 0.2s;
-}
-.card-link:hover { opacity: 0.75; }
-
-/* ═══ WHY US ═══ */
-.why-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.why-visual { position: relative; }
-.why-img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 16px;
-  filter: brightness(0.82);
-}
-
-.why-badge {
-  position: absolute;
-  inset-block-end: 1.75rem;
-  inset-inline-end: 1.75rem;
-  background: var(--orange);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-  text-align: center;
-  min-width: 140px;
-}
-.why-badge .num { font-size: 2.4rem; font-weight: 900; line-height: 1; }
-.why-badge .lbl { font-size: 0.83rem; opacity: 0.9; margin-block-start: 0.2rem; }
-
-.why-points {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-block-start: 2rem;
-}
-
-.why-point {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-.why-dot {
-  width: 10px;
-  height: 10px;
-  min-width: 10px;
-  border-radius: 50%;
-  background: var(--orange);
-  margin-block-start: 0.6rem;
-}
-.why-point h4 { font-size: 1rem; font-weight: 600; margin-block-end: 0.2rem; }
-.why-point p { font-size: 0.88rem; color: var(--gray2); font-weight: 300; }
-
-/* ═══ GALLERY ═══ */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin-block-start: 2rem;
-}
-.gallery-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: brightness(0.88);
-  transition: filter 0.25s, transform 0.25s;
-}
-.gallery-grid img:hover {
-  filter: brightness(1);
-  transform: scale(1.01);
-}
-
-/* ═══ CONTACT ═══ */
-.contact-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-  margin-block-start: 2.5rem;
-}
-
-.contact-items { display: flex; flex-direction: column; gap: 1.5rem; }
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.contact-icon {
-  width: 46px;
-  height: 46px;
-  background: rgba(232,101,10,0.13);
-  border-radius: 11px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-.contact-item .lbl { font-size: 0.78rem; color: var(--gray); display: block; margin-block-end: 0.1rem; }
-.contact-item a, .contact-item strong {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--white);
-}
-.contact-item a:hover, .contact-item a:focus { color: var(--orange2); }
-
-/* ═══ FORM ═══ */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-.field-wrap { display: flex; flex-direction: column; gap: 0.3rem; }
-.field-wrap label {
-  font-size: 0.82rem;
-  color: var(--gray2);
-  font-weight: 500;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-  width: 100%;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  padding: 0.8rem 1rem;
-  color: var(--white);
-  font-family: var(--font);
-  font-size: 0.95rem;
-  direction: rtl;
-  outline: none;
-  transition: border-color 0.2s;
-}
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-  border-color: var(--orange);
-}
-.contact-form input[aria-invalid="true"],
-.contact-form textarea[aria-invalid="true"] {
-  border-color: #e24b4a;
-}
-.contact-form textarea { resize: vertical; min-height: 120px; }
-.contact-form select option { background: var(--navy2); }
-.contact-form input::placeholder,
-.contact-form textarea::placeholder { color: var(--gray); }
-
-.field-error {
-  font-size: 0.8rem;
-  color: #f09595;
-  display: none;
-}
-.field-error.show { display: block; }
-
-/* Live region for form feedback */
-#form-status {
-  font-size: 0.9rem;
-  min-height: 1.4em;
-  color: #97c459;
-}
-
-/* ═══ ACCESSIBILITY STATEMENT ═══ */
-#negishot {
-  background: var(--navy3);
-  border-block-start: 1px solid rgba(255,255,255,0.07);
-}
-#negishot h2 { font-size: 1.3rem; margin-block-end: 1rem; }
-#negishot p, #negishot li {
-  font-size: 0.9rem;
-  color: var(--gray2);
-  font-weight: 300;
-  line-height: 1.7;
-}
-#negishot ul { padding-inline-start: 1.5rem; margin-block: 0.75rem; }
-#negishot li { margin-block-end: 0.4rem; }
-#negishot a { color: var(--orange2); }
-
-/* ═══ FOOTER ═══ */
-footer {
-  background: #070f1a;
-  padding: 2rem 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-block-start: 1px solid rgba(255,255,255,0.06);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-footer p { font-size: 0.83rem; color: var(--gray); }
-footer a { color: var(--orange2); }
-
-/* ═══ WHATSAPP FLOAT ═══ */
-.wa-float {
-  position: fixed;
-  inset-block-end: 1.75rem;
-  inset-inline-start: 1.75rem;
-  z-index: 200;
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 22px rgba(37,211,102,0.42);
-  transition: transform 0.2s;
-}
-.wa-float:hover, .wa-float:focus { transform: scale(1.08); }
-.wa-float svg { width: 30px; height: 30px; fill: white; }
-
-/* ═══ ACCESSIBILITY WIDGET ═══ */
-#a11y-trigger {
-  position: fixed;
-  inset-block-end: 1.75rem;
-  inset-inline-end: 1.75rem;
-  z-index: 200;
-  width: 48px;
-  height: 48px;
-  background: var(--navy2);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 1.3rem;
-  transition: background 0.2s;
-}
-#a11y-trigger:hover, #a11y-trigger:focus { background: var(--navy3); }
-
-#a11y-panel {
-  position: fixed;
-  inset-block-end: 5.5rem;
-  inset-inline-end: 1.75rem;
-  z-index: 199;
-  background: var(--navy2);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px;
-  padding: 1.25rem;
-  width: 230px;
-  display: none;
-  flex-direction: column;
-  gap: 0.75rem;
-  font-size: 0.88rem;
-}
-#a11y-panel.open { display: flex; }
-#a11y-panel h3 { font-size: 0.9rem; font-weight: 600; margin-block-end: 0.25rem; }
-
-.a11y-btn {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius);
-  padding: 0.55rem 0.9rem;
-  color: var(--white);
-  font-family: var(--font);
-  font-size: 0.85rem;
-  cursor: pointer;
-  text-align: start;
-  width: 100%;
-  transition: background 0.15s;
-}
-.a11y-btn:hover, .a11y-btn:focus { background: rgba(255,255,255,0.1); }
-.a11y-btn[aria-pressed="true"] { background: rgba(232,101,10,0.2); border-color: var(--orange); }
-
-/* A11Y CLASS OVERRIDES */
-html.a11y-contrast * {
-  background: #000 !important;
-  color: #ffff00 !important;
-  border-color: #ffff00 !important;
-}
-html.a11y-text-large body { font-size: 120% !important; }
-html.a11y-links a { text-decoration: underline !important; color: #ffff00 !important; }
-html.a11y-reduce-motion * { transition: none !important; animation: none !important; }
-html.a11y-contrast #a11y-trigger,
-html.a11y-contrast #a11y-panel {
-  filter: invert(1);
-}
-@media print {
-  html[class*="a11y-"] { filter: none !important; }
-  html[class*="a11y-text-"] { font-size: 100% !important; }
-}
-
-/* ═══ RESPONSIVE ═══ */
-@media (max-width: 900px) {
-  .why-wrap { grid-template-columns: 1fr; gap: 2rem; }
-  .why-img { height: 320px; }
-  .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 640px) {
-  nav { padding: 0.75rem 1.25rem; }
-  .nav-links { display: none; }
-  .hero { padding: 7rem 5% 3rem; justify-content: center; }
-  .hero-content { text-align: center; }
-  .hero-lead { margin-inline: auto; }
-  .hero-btns { justify-content: center; }
-  .hero-stats { justify-content: center; gap: 2rem; }
-  .form-row { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .sec { padding: 3.5rem 5%; }
-  footer { justify-content: center; text-align: center; }
-}
-
-/* ── Mobile nav call button ─────────────────── */
-.nav-call-mobile {
-  display: none;
-}
-@media (max-width: 640px) {
-  .nav-call-mobile {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    background: var(--orange);
-    color: var(--white);
-    font-family: var(--font);
-    font-size: 0.88rem;
-    font-weight: 700;
-    padding: 0.45rem 0.9rem;
-    border-radius: 6px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.2s;
-  }
-  .nav-call-mobile:hover,
-  .nav-call-mobile:focus { background: var(--orange2); }
-}
-
-/* ── Mobile bottom CTA bar ──────────────────── */
-.mobile-cta-bar {
-  display: none;
-}
-@media (max-width: 640px) {
-  .mobile-cta-bar {
-    display: flex;
-    position: fixed;
-    inset-block-end: 0;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    z-index: 300;
-    background: var(--navy);
-    border-top: 2px solid var(--orange);
-    height: 60px;
-    direction: rtl;
-  }
-  .mobile-cta-bar a {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    font-family: var(--font);
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--white);
-    transition: background 0.2s;
-  }
-  .mobile-cta-bar .cta-call {
-    background: var(--orange);
-    border-left: 1px solid rgba(255,255,255,0.15);
-  }
-  .mobile-cta-bar .cta-call:active { background: var(--orange2); }
-  .mobile-cta-bar .cta-wa {
-    background: #25d366;
-  }
-  .mobile-cta-bar .cta-wa:active { background: #1ebe5a; }
-
-  /* 3. מנע הסתרת תוכן מתחת לפס */
-  body { padding-bottom: 60px; }
-
-  /* 4. הסתר כפתור WA צף במובייל — הפס התחתון מחליף אותו */
-  .wa-float { display: none; }
-}
-
-  /* ===== HOW TO START SECTION ===== */
-  .how-wrap {
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  .how-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin: 2.5rem 0;
-    counter-reset: step-counter;
-  }
-  .how-step {
-    background: var(--white);
-    border-radius: 12px;
-    padding: 1.6rem 1.4rem 1.4rem;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    position: relative;
-    counter-increment: step-counter;
-    border-top: 4px solid var(--orange);
-    text-align: right;
-  }
-  .how-step::before {
-    content: counter(step-counter);
-    position: absolute;
-    top: -18px;
-    right: 18px;
-    background: var(--orange);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: 800;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-  }
-  .how-step h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--navy);
-    margin: 0.4rem 0 0.6rem;
-  }
-  .how-step p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-  }
-  .how-cta-wrap {
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-
-  /* ===== FAQ SECTION ===== */
-  .faq-wrap {
-    max-width: 760px;
-    margin: 0 auto;
-  }
-  .faq-list {
-    margin: 2.5rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .faq-item {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 1.3rem 0;
-  }
-  .faq-item:first-child {
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-  .faq-item dt {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-    cursor: default;
-    padding-right: 1.4rem;
-    position: relative;
-  }
-  .faq-item dt::before {
-    content: "Q";
-    position: absolute;
-    right: 0;
-    color: var(--orange);
-    font-size: 0.78rem;
-    font-weight: 800;
-    top: 2px;
-  }
-  .faq-item dd {
-    font-size: 0.92rem;
-    color: rgba(255,255,255,0.78);
-    line-height: 1.65;
-    margin: 0;
-    padding-right: 1.4rem;
-  }
-
-
-  /* ===== HERO IMPROVEMENTS ===== */
-  .hero-h1-question {
-    display: block;
-    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-    font-weight: 500;
-    color: rgba(255,255,255,0.65);
-    letter-spacing: 0.01em;
-    margin-block-end: 0.4rem;
-    animation: fadeSlideUp 0.6s ease both;
-  }
-  .hero-h1-answer {
-    display: block;
-    font-size: clamp(2.3rem, 4.8vw, 3.8rem);
-    font-weight: 900;
-    color: var(--white);
-    line-height: 1.15;
-    animation: fadeSlideUp 0.6s 0.15s ease both;
-  }
-  .hero-h1-answer em {
-    color: var(--orange);
-    font-style: normal;
-  }
-  .hero-lead {
-    animation: fadeSlideUp 0.6s 0.25s ease both;
-  }
-  .hero-trust {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem 1.4rem;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem;
-    animation: fadeSlideUp 0.6s 0.35s ease both;
-  }
-  .hero-trust li {
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.82);
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-  .hero-trust li::first-letter {
-    color: var(--orange);
-  }
-  .hero-btns {
-    animation: fadeSlideUp 0.6s 0.4s ease both;
-  }
-  @keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(14px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ===== WHY MINI SECTION ===== */
-  .why-mini {
-    background: #f7f9fc;
-    padding: 3rem 6%;
-    border-bottom: 1px solid #e8edf2;
-  }
-  .why-mini-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .why-mini-card {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    padding: 1.4rem 1.2rem;
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #e4e9f0;
-    text-align: right;
-    direction: rtl;
-  }
-  .why-mini-icon {
-    font-size: 1.6rem;
-    line-height: 1;
-    margin-block-end: 0.2rem;
-  }
-  .why-mini-card strong {
-    font-size: 0.97rem;
-    font-weight: 700;
-    color: #1a2a3a;
-    line-height: 1.3;
-  }
-  .why-mini-card p {
-    font-size: 0.88rem;
-    color: #5a6a7a;
-    line-height: 1.6;
-    margin: 0;
-  }
-  @media (max-width: 640px) {
-    .why-mini { padding: 2rem 5%; }
-    .why-mini-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
-    .why-mini-card { padding: 1rem; }
-  }
-
-
-/* ===== REDESIGN 2024: HEADER, GEO-BAR, HERO-SPLIT, INFO-STRIP ===== */
-
-.phone-number {
-  direction: ltr;
-  unicode-bidi: isolate;
-  display: inline-block;
-  white-space: nowrap;
-}
-
-/* --- Site Header --- */
+/* HEADER */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--navy);
-  border-bottom: 2px solid rgba(232,101,10,0.4);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
 .site-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  height: 64px;
-  gap: 1rem;
+  max-width: 1240px; margin: 0 auto;
+  display: flex; align-items: center; gap: 20px;
+  padding: 0 24px; height: 70px;
 }
-.nav-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  line-height: 1.15;
-  text-decoration: none;
-  flex-shrink: 0;
+.nav-logo { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+.nav-logo:hover { color: var(--ink); }
+.logo-icon { width: 36px; height: 36px; color: var(--orange); flex-shrink: 0; }
+.logo-text-wrap { display: flex; flex-direction: column; line-height: 1.15; }
+.logo-word { font-weight: 900; font-size: 1.35rem; }
+.logo-tagline { font-family: var(--mono); font-size: 0.58rem; color: var(--ink-faint); letter-spacing: 0.14em; }
+.nav-links { display: flex; gap: 2px; margin-inline-start: auto; }
+.nav-links a {
+  color: var(--ink-dim); font-size: 0.9rem; font-weight: 600;
+  padding: 9px 12px; border-radius: 99px; white-space: nowrap;
 }
-.logo-word {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: 0.01em;
-}
-.logo-tagline {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: var(--orange);
-  letter-spacing: 0.04em;
-}
-.site-nav .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1;
-  justify-content: center;
-}
-.site-nav .nav-links a {
-  color: rgba(255,255,255,0.78);
-  font-size: 0.88rem;
-  font-weight: 400;
-  transition: color 0.2s;
-  white-space: nowrap;
-  text-decoration: none;
-}
-.site-nav .nav-links a:hover,
-.site-nav .nav-links a:focus { color: var(--white); }
+.nav-links a:hover { color: var(--ink); background: #efede8; }
 .nav-cta-phone {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: var(--orange);
-  color: var(--white);
-  font-size: 0.88rem;
-  font-weight: 700;
-  padding: 0.48rem 1rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: background 0.2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--orange); color: #fff;
+  font-weight: 700; font-size: 0.92rem;
+  padding: 10px 18px; border-radius: 99px; white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(232,89,12,0.25);
 }
-.nav-cta-phone:hover,
-.nav-cta-phone:focus { background: var(--orange2); color: var(--white); }
-.nav-hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 38px;
-  height: 38px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 4px;
-}
-.nav-hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-}
-.mobile-nav-menu {
-  background: var(--navy);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 0.5rem 5% 1rem;
-}
-.mobile-nav-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-.mobile-nav-menu li a {
-  display: block;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.82);
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.mobile-nav-menu li a:hover { color: var(--white); }
-.mobile-phone-item a { color: var(--orange) !important; font-weight: 700 !important; }
+.nav-cta-phone:hover { background: var(--orange-deep); color: #fff; }
+.nav-hamburger { display: none; }
+.mobile-nav-menu { display: none; }
 
-/* --- Geo Bar --- */
+@media (max-width: 1020px) {
+  .nav-links, .nav-cta-phone { display: none; }
+  .nav-hamburger {
+    display: flex; flex-direction: column; gap: 5px;
+    margin-inline-start: auto;
+    background: none; border: 1px solid var(--line-strong);
+    padding: 11px 10px; border-radius: var(--radius); cursor: pointer;
+  }
+  .nav-hamburger span { width: 20px; height: 2px; background: var(--ink); display: block; }
+  .mobile-nav-menu { display: block; border-top: 1px solid var(--line); background: #fff; }
+  .mobile-nav-menu[hidden] { display: none; }
+  .mobile-nav-menu ul { padding: 8px 0; }
+  .mobile-nav-menu a {
+    display: block; padding: 13px 24px;
+    color: var(--ink); font-weight: 600;
+    border-bottom: 1px solid var(--line);
+  }
+  .mobile-phone-item a { color: var(--orange); font-weight: 700; }
+}
+
+/* GEO BAR */
 .geo-bar {
-  background: var(--white);
-  border-bottom: 1px solid rgba(0,0,0,0.09);
-  padding: 0.5rem 5%;
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  font-size: 0.82rem;
+  background: var(--dark); color: #d8d6cf;
+  padding: 9px 24px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 18px; flex-wrap: wrap;
 }
-.geo-label {
-  font-weight: 700;
-  color: var(--navy);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.geo-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center; }
-.geo-chips span {
-  background: rgba(13,27,42,0.07);
-  border-radius: 999px;
-  padding: 0.18rem 0.65rem;
-  color: #444;
-  font-size: 0.77rem;
-  white-space: nowrap;
-}
+.geo-label { font-family: var(--mono); font-size: 0.72rem; color: #ffb37e; letter-spacing: 0.08em; white-space: nowrap; }
+.geo-chips { display: flex; gap: 6px 14px; flex-wrap: wrap; }
+.geo-chips span { font-family: var(--mono); font-size: 0.7rem; color: #8b8a84; letter-spacing: 0.05em; }
+.geo-chips span:not(:last-child)::after { content: '·'; margin-inline-start: 14px; color: #55544f; }
+@media (max-width: 700px) { .geo-chips { display: none; } }
 
-/* --- Hero Split --- */
+/* HERO */
 .hero-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 72svh;
-  direction: rtl;
+  max-width: 1240px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px; align-items: center;
+  padding: 64px 24px 72px;
 }
+.hero-split-text { order: 0; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; border: 1px solid var(--line);
+  color: var(--orange); font-weight: 700; font-size: 0.82rem;
+  padding: 6px 14px; border-radius: 99px;
+  margin-bottom: 22px;
+}
+.hero-eyebrow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
+.hero-split-text h1 {
+  font-size: clamp(2.1rem, 4.4vw, 3.5rem);
+  font-weight: 900; line-height: 1.16;
+  margin-bottom: 20px; letter-spacing: -0.015em;
+}
+.hero-h1-main { color: var(--ink); }
+.hero-h1-dash { display: none; }
+.hero-h1-sub { color: var(--orange); }
+.hero-lead { color: var(--ink-dim); font-size: 1.1rem; max-width: 52ch; margin-bottom: 28px; }
+.hero-badges {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 10px; margin-bottom: 32px; max-width: 540px;
+}
+.hero-badge-item {
+  display: flex; align-items: center; gap: 11px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px 15px;
+  font-size: 0.9rem; font-weight: 600;
+}
+.badge-icon-wrap { width: 24px; height: 24px; color: var(--orange); flex-shrink: 0; }
+.badge-icon-wrap svg { width: 100%; height: 100%; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 1rem;
+  padding: 15px 28px; border-radius: 99px;
+  border: 1px solid transparent; cursor: pointer;
+  transition: all 0.15s;
+}
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-primary {
+  background: var(--orange); color: #fff;
+  box-shadow: 0 4px 16px rgba(232,89,12,0.3);
+}
+.btn-primary:hover { background: var(--orange-deep); color: #fff; transform: translateY(-1px); }
+.btn-outline-w { background: #fff; color: var(--ink); border-color: var(--line-strong); }
+.btn-outline-w:hover { border-color: var(--orange); color: var(--orange); }
+
 .hero-split-photo {
   background: url('gallery_photos/hero_worker.jpg') center 20%/cover no-repeat;
-  min-height: 420px;
+  border-radius: 16px;
+  min-height: 520px;
+  box-shadow: 0 24px 60px -24px rgba(22,22,26,0.35);
 }
-.hero-split-text {
-  background: var(--navy);
-  padding: 3.5rem 5% 3rem 3.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: right;
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; gap: 28px; padding: 36px 22px 48px; }
+  .hero-split-photo { min-height: 250px; order: -1; }
 }
-.hero-eyebrow {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--orange);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin: 0 0 0.9rem;
-}
-.hero-h1-main {
-  display: block;
-  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
-  font-weight: 900;
-  color: var(--white);
-  line-height: 1.15;
-}
-.hero-h1-dash {
-  display: inline-block;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  color: var(--orange);
-  font-weight: 300;
-  line-height: 1;
-  margin: 0.1rem 0.3rem 0.1rem 0;
-}
-.hero-h1-sub {
-  display: inline;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 700;
-  color: rgba(255,255,255,0.82);
-  line-height: 1.2;
-}
-.hero-split h1 { margin: 0 0 1rem; }
-.hero-split .hero-lead {
-  font-size: 0.97rem;
-  color: rgba(255,255,255,0.68);
-  line-height: 1.75;
-  margin: 0 0 1.6rem;
-  max-width: 430px;
-  font-weight: 300;
-}
-.hero-badges {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.7rem;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.8rem;
-}
-.hero-badge-item {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 0.6rem 0.75rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.88);
-}
-.badge-icon-wrap {
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
-  color: var(--orange);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.badge-icon-wrap svg { width: 100%; height: 100%; }
-.hero-split .hero-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.72rem 1.3rem;
-  border-radius: var(--radius);
-  font-size: 0.93rem;
-  font-weight: 700;
-  font-family: var(--font);
-  text-decoration: none;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-  white-space: nowrap;
-}
-.btn-primary { background: var(--orange); color: var(--white); border-color: var(--orange); }
-.btn-primary:hover, .btn-primary:focus { background: var(--orange2); border-color: var(--orange2); }
-.btn-outline-w { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
-.btn-outline-w:hover, .btn-outline-w:focus { border-color: var(--white); background: rgba(255,255,255,0.08); }
 
-/* --- Info Strip --- */
+/* INFO STRIP */
 .info-strip {
-  background: var(--orange);
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  direction: rtl;
+  background: var(--dark); color: #fff;
+}
+.info-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
 }
 .info-strip-item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.95rem 1.8rem;
-  border-left: 1px solid rgba(255,255,255,0.22);
-  flex: 1;
-  min-width: 175px;
-  color: var(--white);
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 22px 18px;
 }
-.info-strip-item:last-child { border-left: none; }
-.info-strip-item svg { flex-shrink: 0; opacity: 0.9; }
-.info-strip-item > div { display: flex; flex-direction: column; gap: 0.08rem; }
-.info-strip-item strong { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.03em; color: var(--white); }
-.info-strip-item span { font-size: 0.87rem; font-weight: 600; color: rgba(255,255,255,0.9); }
-.info-strip-item a.phone-number { font-size: 0.95rem; font-weight: 700; color: var(--white); text-decoration: none; }
-.info-strip-item a.phone-number:hover { text-decoration: underline; }
+.info-strip-item svg { color: #ffb37e; flex-shrink: 0; }
+.info-strip-item strong { display: block; font-size: 0.88rem; }
+.info-strip-item span { display: block; font-size: 0.78rem; color: #a3a29b; }
+.info-strip-item a { color: #fff; font-weight: 700; }
+.info-strip-item a:hover { color: #ffb37e; }
+@media (max-width: 900px) { .info-strip { grid-template-columns: 1fr 1fr; } }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-  .site-nav .nav-links { display: none; }
-  .nav-cta-phone { display: none; }
-  .nav-hamburger { display: flex; }
+/* WHY MINI */
+.why-mini { max-width: 1240px; margin: 0 auto; padding: 64px 24px 8px; }
+.why-mini-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.why-mini-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 26px 22px;
 }
-@media (max-width: 768px) {
-  .hero-split { grid-template-columns: 1fr; }
-  .hero-split-photo { min-height: 240px; order: -1; }
-  .hero-split-text { padding: 2.2rem 5%; }
-  .hero-split .hero-lead { margin-inline: 0; }
-  .hero-split .hero-btns { justify-content: flex-start; }
-  .hero-badges { grid-template-columns: 1fr 1fr; }
-  .info-strip { flex-direction: column; }
-  .info-strip-item { border-left: none; border-bottom: 1px solid rgba(255,255,255,0.18); padding: 0.75rem 5%; }
-  .info-strip-item:last-child { border-bottom: none; }
-  .geo-bar { gap: 0.6rem; }
-}
-@media (max-width: 440px) {
-  .hero-badges { grid-template-columns: 1fr; }
-  .hero-h1-main { font-size: 1.65rem; }
-  .hero-h1-sub { font-size: 1.25rem; }
-  .btn { font-size: 0.87rem; padding: 0.65rem 1rem; }
-}
+.why-mini-icon { display: block; width: 30px; height: 30px; color: var(--orange); margin-bottom: 14px; }
+.why-mini-icon svg { width: 100%; height: 100%; }
+.why-mini-card strong { display: block; font-size: 1rem; margin-bottom: 6px; }
+.why-mini-card p { font-size: 0.86rem; color: var(--ink-dim); }
+@media (max-width: 900px) { .why-mini-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .why-mini-grid { grid-template-columns: 1fr; } }
 
+/* BANNER */
+.banner-strip {
+  max-width: 1240px; margin: 40px auto 0;
+  background: var(--orange); color: #fff;
+  border-radius: 12px;
+  padding: 13px 24px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 18px; flex-wrap: wrap;
+  font-weight: 600; font-size: 0.9rem;
+}
+.banner-strip a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.banner-sep { opacity: 0.5; }
+@media (max-width: 1290px) { .banner-strip { margin-inline: 24px; } }
 
-/* ===== VISUAL UPDATE: white hero + horizontal badges ===== */
+/* SECTIONS */
+.sec { max-width: 1240px; margin: 0 auto; padding: 72px 24px; }
+.sec[data-idx]::before { content: none; }
+.pre-label {
+  display: inline-flex;
+  color: var(--orange); font-weight: 700; font-size: 0.82rem;
+  letter-spacing: 0.08em; margin-bottom: 10px;
+  font-family: var(--mono);
+}
+.sec h2, .sec-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 900; line-height: 1.25; margin-bottom: 12px;
+}
+.sec-sub { color: var(--ink-dim); max-width: 60ch; margin-bottom: 38px; font-size: 1.02rem; }
 
-/* Logo icon */
-.logo-icon {
-  width: 36px; height: 36px;
-  color: var(--orange);
-  flex-shrink: 0;
-}
-.nav-logo {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.55rem;
-}
-.logo-text-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  line-height: 1.15;
-}
-
-/* Header CTA block (two lines) */
-.nav-cta-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--orange);
-  color: var(--white) !important;
-  text-decoration: none;
-  padding: 0.45rem 1.15rem;
-  border-radius: var(--radius);
-  line-height: 1.3;
-  flex-shrink: 0;
-  transition: background 0.2s;
-  text-align: center;
-}
-.nav-cta-block:hover, .nav-cta-block:focus { background: var(--orange2); }
-.nav-cta-phone-num {
-  font-size: 0.98rem;
-  font-weight: 800;
-  direction: ltr;
-  unicode-bidi: isolate;
-  white-space: nowrap;
-}
-.nav-cta-phone-num svg { vertical-align: middle; margin-left: 0.3rem; }
-.nav-cta-sub {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: rgba(255,255,255,0.88);
-  white-space: nowrap;
-}
-/* Hide old single-line phone button */
-.nav-cta-phone { display: none !important; }
-
-/* Geo bar — pipe separators instead of chips */
-.geo-chips span {
-  background: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  font-size: 0.82rem !important;
-  color: #555 !important;
-}
-.geo-chips span:not(:last-child)::after {
-  content: " | ";
-  color: #bbb;
-  margin: 0 0.1rem;
-}
-
-/* Hero right side — WHITE */
-.hero-split-text {
-  background: #ffffff !important;
-  padding: 3.5rem 5% 3rem 4rem !important;
-}
-.hero-eyebrow { color: var(--orange) !important; }
-.hero-h1-main {
-  color: var(--navy) !important;
-  font-size: clamp(1.9rem, 3.4vw, 2.85rem) !important;
-}
-.hero-h1-dash { display: none !important; }
-.hero-h1-sub {
-  display: block !important;
-  color: var(--navy) !important;
-  font-size: clamp(1.9rem, 3.4vw, 2.85rem) !important;
-  font-weight: 900 !important;
-}
-.hero-split h1 { margin: 0 0 0.9rem !important; }
-.hero-split .hero-lead {
-  color: #505050 !important;
-  font-weight: 400 !important;
-}
-
-/* Badges — horizontal row of 4, column layout */
-.hero-badges {
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 0.6rem !important;
-  margin: 0 0 1.6rem !important;
-}
-.hero-badge-item {
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  background: transparent !important;
-  border: 1.5px solid rgba(13,27,42,0.12) !important;
-  color: var(--navy) !important;
-  padding: 0.75rem 0.5rem !important;
-  gap: 0.4rem !important;
-  font-size: 0.75rem !important;
-}
-.badge-icon-wrap {
-  color: var(--orange) !important;
-  width: 30px !important;
-  height: 30px !important;
-}
-
-/* Outline button — dark on white bg */
-.btn-outline-w {
-  border-color: rgba(13,27,42,0.35) !important;
-  color: var(--navy) !important;
-}
-.btn-outline-w:hover, .btn-outline-w:focus {
-  border-color: var(--navy) !important;
-  background: rgba(13,27,42,0.05) !important;
-  color: var(--navy) !important;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero-split-text { padding: 2.2rem 5% !important; }
-  .hero-badges { grid-template-columns: 1fr 1fr !important; }
-}
-@media (max-width: 440px) {
-  .hero-badges { grid-template-columns: 1fr 1fr !important; }
-}
-
-
-/* ===== FADE-IN ANIMATIONS (hero) ===== */
-@keyframes fadeInFromRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes fadeInFromLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* text side fades in from the right (RTL reading direction) */
-.hero-split-text {
-  animation: fadeInFromRight 0.75s cubic-bezier(0.22,1,0.36,1) both;
-  animation-delay: 0.1s;
-}
-/* photo side fades in from the left */
-.hero-split-photo {
-  animation: fadeInFromLeft 0.75s cubic-bezier(0.22,1,0.36,1) both;
-  animation-delay: 0.25s;
-}
-/* badges stagger up */
-.hero-badge-item {
-  animation: fadeInUp 0.5s ease both;
-}
-.hero-badge-item:nth-child(1) { animation-delay: 0.55s; }
-.hero-badge-item:nth-child(2) { animation-delay: 0.65s; }
-.hero-badge-item:nth-child(3) { animation-delay: 0.75s; }
-.hero-badge-item:nth-child(4) { animation-delay: 0.85s; }
-
-/* ===== LIGHT THEME: override dark sec-mid sections ===== */
-.sec-mid {
-  background: #f4f7fb !important;
-  color: var(--navy) !important;
-}
-.sec-mid .sec-title,
-.sec-mid .sec-sub,
-.sec-mid h2,
-.sec-mid h3,
-.sec-mid p {
-  color: var(--navy) !important;
-}
-.sec-mid .pre-label {
-  color: var(--orange) !important;
-  background: rgba(232,101,10,0.08) !important;
-}
-
-/* Service cards - light */
+/* SERVICES */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .service-card {
-  background: #ffffff !important;
-  border: 1.5px solid rgba(13,27,42,0.09) !important;
-  color: var(--navy) !important;
-  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 28px 24px;
+  position: relative;
+  transition: box-shadow 0.18s, transform 0.18s, border-color 0.18s;
 }
-.service-card h3,
-.service-card p {
-  color: var(--navy) !important;
+.service-card:hover {
+  border-color: var(--line-strong);
+  box-shadow: 0 14px 34px -16px rgba(22,22,26,0.18);
+  transform: translateY(-2px);
+}
+.card-num {
+  position: absolute; top: 24px; left: 22px;
+  font-family: var(--mono); font-size: 0.66rem; color: var(--ink-faint);
+}
+.service-icon, .svc-icon { display: block; width: 30px; height: 30px; color: var(--orange); margin-bottom: 16px; }
+.service-icon svg, .svc-icon svg { width: 100%; height: 100%; }
+.service-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.service-card h3 a { color: var(--ink); }
+.service-card h3 a:hover { color: var(--orange); }
+.service-card p { font-size: 0.89rem; color: var(--ink-dim); }
+.card-link {
+  display: inline-flex; gap: 6px; margin-top: 14px;
+  font-weight: 700; font-size: 0.85rem; color: var(--orange);
+}
+@media (max-width: 980px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .services-grid { grid-template-columns: 1fr; } }
+
+/* HOW */
+.how-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; counter-reset: step; margin-bottom: 36px;
+}
+.how-step {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 26px 22px;
+  counter-increment: step; position: relative;
+}
+.how-step::before {
+  content: '0' counter(step);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #fdeee4; color: var(--orange);
+  font-family: var(--mono); font-weight: 600; font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+.how-step::after { content: none; }
+.how-step h3 { font-size: 1rem; margin-bottom: 6px; }
+.how-step p { font-size: 0.87rem; color: var(--ink-dim); }
+.how-cta-wrap { display: flex; justify-content: center; }
+@media (max-width: 980px) { .how-steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .how-steps { grid-template-columns: 1fr; } }
+
+/* AUDIENCE */
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.audience-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 24px 22px;
+  border-inline-start: 3px solid var(--orange);
+}
+.audience-num { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-faint); display: block; margin-bottom: 10px; }
+.audience-card h3 { font-size: 1.02rem; margin-bottom: 6px; }
+.audience-card p { font-size: 0.87rem; color: var(--ink-dim); }
+@media (max-width: 980px) { .audience-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .audience-grid { grid-template-columns: 1fr; } }
+
+/* GALLERY */
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.gallery-grid img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.gallery-grid img:hover { transform: scale(1.015); box-shadow: 0 12px 28px -12px rgba(22,22,26,0.3); }
+@media (max-width: 980px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* WHY US */
+.why-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 52px; align-items: center; }
+.why-visual { position: relative; }
+.why-img {
+  width: 100%; aspect-ratio: 4/5; object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px -24px rgba(22,22,26,0.35);
+}
+.why-badge {
+  position: absolute; bottom: -16px; right: -8px;
+  background: var(--dark); color: #fff;
+  padding: 16px 22px; border-radius: 12px; text-align: center;
+}
+.why-badge .num { font-family: var(--mono); font-size: 1.7rem; color: #ffb37e; line-height: 1; }
+.why-badge .lbl { font-size: 0.78rem; font-weight: 700; }
+.why-points { display: flex; flex-direction: column; gap: 6px; }
+.why-point {
+  display: flex; gap: 14px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 16px 18px;
+}
+.why-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--orange); margin-top: 9px; flex-shrink: 0; }
+.why-point h3 { font-size: 1rem; margin-bottom: 3px; }
+.why-point p { font-size: 0.88rem; color: var(--ink-dim); }
+@media (max-width: 900px) {
+  .why-wrap { grid-template-columns: 1fr; gap: 36px; }
+  .why-img { aspect-ratio: 16/10; }
+  .why-badge { right: 14px; }
 }
 
-/* How-to steps - light */
-.how-step,
-.how-card {
-  background: #ffffff !important;
-  border: 1.5px solid rgba(13,27,42,0.09) !important;
-  color: var(--navy) !important;
-  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+/* FAQ */
+.faq-wrap { max-width: 840px; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 20px 22px;
 }
-.how-step strong,
-.how-step p,
-.how-card strong,
-.how-card p {
-  color: var(--navy) !important;
+.faq-item dt { font-weight: 700; font-size: 1.02rem; margin-bottom: 7px; display: flex; gap: 10px; }
+.faq-item dt::before { content: 'Q'; font-family: var(--mono); color: var(--orange); font-weight: 600; }
+.faq-item dd { color: var(--ink-dim); font-size: 0.93rem; padding-inline-start: 24px; }
+
+/* CONTACT */
+.contact-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 52px; align-items: start; }
+.contact-items { display: flex; flex-direction: column; gap: 10px; }
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 15px 18px;
 }
-.how-step .step-num,
-.how-num {
-  background: var(--orange) !important;
-  color: #fff !important;
+.contact-icon { width: 22px; height: 22px; color: var(--orange); flex-shrink: 0; }
+.contact-icon svg { width: 100%; height: 100%; }
+.contact-item .lbl { display: block; font-size: 0.72rem; color: var(--ink-faint); margin-bottom: 1px; }
+.contact-item a, .contact-item strong { font-weight: 700; color: var(--ink); font-size: 0.98rem; }
+.contact-item a:hover { color: var(--orange); }
+
+.contact-form {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 16px; padding: 32px 28px;
+  box-shadow: 0 18px 44px -22px rgba(22,22,26,0.18);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field-wrap { margin-bottom: 16px; }
+.field-wrap label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; }
+.field-wrap input, .field-wrap select, .field-wrap textarea {
+  width: 100%; background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  color: var(--ink); font-family: var(--sans); font-size: 0.95rem;
+  padding: 12px 14px;
+}
+.field-wrap textarea { min-height: 110px; resize: vertical; }
+.field-wrap input::placeholder, .field-wrap textarea::placeholder { color: var(--ink-faint); }
+.field-wrap input:focus, .field-wrap select:focus, .field-wrap textarea:focus {
+  outline: none; border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,89,12,0.13);
+}
+.field-wrap input[aria-invalid="true"] { border-color: #d33; }
+.field-error { display: none; color: #c33; font-size: 0.78rem; margin-top: 5px; }
+.field-error.show { display: block; }
+.field-hint { font-size: 0.78rem; color: var(--ink-faint); }
+#form-status { color: var(--orange); font-weight: 700; margin-bottom: 10px; }
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
-/* FAQ - light */
-.faq-item,
-.faq-q,
-.faq-a {
-  background: #ffffff !important;
-  color: var(--navy) !important;
-  border-color: rgba(13,27,42,0.1) !important;
+/* NEGISHOT */
+#negishot { border-top: 1px solid var(--line); }
+#negishot p, #negishot li { color: var(--ink-dim); font-size: 0.92rem; }
+#negishot h2 { font-size: 1.4rem; }
+#negishot ul { margin: 14px 0; }
+#negishot li { display: flex; gap: 10px; padding: 3px 0; }
+#negishot li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+
+/* FB STRIP */
+.fb-strip { background: var(--dark); }
+.fb-strip a {
+  max-width: 1240px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 20px 24px; color: #fff; font-weight: 600;
 }
-.faq-q {
-  border-bottom: 1px solid rgba(13,27,42,0.1) !important;
+.fb-strip a:hover { color: #ffb37e; }
+.fb-strip svg { color: #ffb37e; }
+.fb-strip .fb-mono { font-family: var(--mono); font-size: 0.7rem; color: #8b8a84; letter-spacing: 0.12em; }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  padding: 28px 24px 110px;
+  text-align: center; color: #8b8a84; font-size: 0.85rem;
+  border-top: 1px solid #26262b;
+}
+footer p { margin-bottom: 8px; }
+footer a { color: #c9c8c1; }
+footer a:hover { color: #ffb37e; }
+@media (min-width: 901px) { footer { padding-bottom: 36px; } }
+
+/* FLOATS */
+.wa-float {
+  position: fixed; bottom: 86px; left: 18px; z-index: 150;
+  width: 54px; height: 54px;
+  background: var(--orange); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(232,89,12,0.4);
+}
+.wa-float:hover { background: var(--orange-deep); }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+@media (min-width: 901px) { .wa-float { bottom: 24px; } }
+
+#a11y-trigger {
+  position: fixed; bottom: 86px; right: 18px; z-index: 150;
+  width: 46px; height: 46px;
+  background: #fff; color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%; font-size: 1.25rem; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(22,22,26,0.12);
+}
+#a11y-trigger:hover { border-color: var(--orange); }
+@media (min-width: 901px) { #a11y-trigger { bottom: 24px; right: 88px; } }
+#a11y-panel {
+  position: fixed; bottom: 142px; right: 18px; z-index: 150;
+  background: #fff; border: 1px solid var(--line-strong);
+  border-radius: 12px; padding: 16px;
+  display: none; flex-direction: column; gap: 8px; min-width: 190px;
+  box-shadow: 0 14px 40px -12px rgba(22,22,26,0.25);
+}
+#a11y-panel.open { display: flex; }
+#a11y-panel h3 { font-size: 0.9rem; margin-bottom: 4px; }
+.a11y-btn {
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 9px 12px; font-family: var(--sans); font-size: 0.85rem;
+  cursor: pointer; text-align: right;
+}
+.a11y-btn:hover, .a11y-btn[aria-pressed="true"] { border-color: var(--orange); color: var(--orange); }
+@media (min-width: 901px) { #a11y-panel { bottom: 84px; right: 88px; } }
+
+html.a11y-contrast body { background: #fff; color: #000; }
+html.a11y-text-large body { font-size: 19.5px; }
+html.a11y-links a { text-decoration: underline !important; }
+html.a11y-reduce-motion *, html.a11y-reduce-motion *::before, html.a11y-reduce-motion *::after {
+  animation: none !important; transition: none !important;
 }
 
-/* Why us cards - light */
-.why-card,
-.why-item {
-  background: #ffffff !important;
-  border: 1.5px solid rgba(13,27,42,0.09) !important;
-  color: var(--navy) !important;
-  box-shadow: 0 2px 12px rgba(13,27,42,0.06) !important;
+/* MOBILE CTA BAR */
+.mobile-cta-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 160;
+  display: grid; grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 22px rgba(22,22,26,0.1);
 }
-.why-card h3,
-.why-card p,
-.why-item h3,
-.why-item p {
-  color: var(--navy) !important;
+.mobile-cta-bar a {
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 15px 10px; font-weight: 700; font-size: 0.95rem;
 }
+.cta-wa { background: var(--orange); color: #fff; }
+.cta-wa:hover { background: var(--orange-deep); color: #fff; }
+.cta-wa svg { fill: #fff; }
+.cta-call { color: var(--ink); }
+.cta-call:hover { color: var(--orange); }
+@media (min-width: 901px) { .mobile-cta-bar { display: none; } }
 
-/* Contact section stays dark (intentional) - override back */
-#contact.sec-mid {
-  background: var(--navy) !important;
-  color: var(--white) !important;
-}
-#contact.sec-mid .sec-title,
-#contact.sec-mid .sec-sub,
-#contact.sec-mid h2,
-#contact.sec-mid p,
-#contact.sec-mid label {
-  color: var(--white) !important;
-}
-#contact.sec-mid .pre-label {
-  color: var(--orange) !important;
-}
-
-/* Audience section - keep light */
-#audience {
-  background: #ffffff !important;
-}
-
-/* Gallery - white bg */
-#gallery {
-  background: #ffffff !important;
-}
-#gallery .sec-title,
-#gallery .sec-sub,
-#gallery h2 {
-  color: var(--navy) !important;
-}
-#gallery .pre-label {
-  color: var(--orange) !important;
-}
-
-
-/* Hero grid: photo on LEFT, text on RIGHT (override RTL column order) */
-.hero-split {
-  direction: ltr !important;
-}
-.hero-split-text {
-  direction: rtl;
-}
-
-
-/* === HERO: photo col-1(LEFT), text col-2(RIGHT) === */
-.hero-split-photo {
-  grid-column: 1;
-  grid-row: 1;
-}
-.hero-split-text {
-  grid-column: 2;
-  grid-row: 1;
-}
 </style>
-    <link rel="icon" href="/favicon.ico">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "האם אפשר לבצע עבודות גובה בלי פיגומים?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "כן. במקרים רבים עבודת סנפלינג חוסכת את הצורך בפיגומים, מקצרת זמני ביצוע ומוזילה עלויות."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "האם אתם מבוטחים?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "כן. העבודה מתבצעת עם ביטוח מתאים לעבודות גובה ולפי דרישות הבטיחות."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "באילו אזורים אתם עובדים?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "תל אביב, גוש דן, רמת גן, גבעתיים, בני ברק, פתח תקווה ואזור המרכז."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "איך מקבלים הצעת מחיר?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "אפשר לשלוח תמונות ופרטים בוואטסאפ, ואנחנו נחזור עם אבחון ראשוני והצעה מסודרת."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "אילו עבודות אפשר לבצע בסנפלינג?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "ניקוי חזיתות, איטום, צביעה, תיקון סדקים, עבודות טיח, ניקוי חלונות ושיקום נקודתי של חזיתות."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "האם יש אחריות על העבודה?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "במקרים הרלוונטיים ניתנת אחריות לפי סוג העבודה, החומרים ותנאי השטח."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -1734,7 +679,7 @@ html.a11y-contrast #a11y-panel {
       </svg>
       <div class="logo-text-wrap">
         <span class="logo-word">אלדרור</span>
-        <span class="logo-tagline">איטום ועבודות גובה</span>
+        <span class="logo-tagline">ROPE ACCESS · EST.1994</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -1762,7 +707,7 @@ html.a11y-contrast #a11y-panel {
       <li><a href="#why" onclick="document.getElementById('mobile-nav-menu').hidden=true;">למה אנחנו</a></li>
       <li><a href="#faq" onclick="document.getElementById('mobile-nav-menu').hidden=true;">שאלות נפוצות</a></li>
       <li><a href="#contact" onclick="document.getElementById('mobile-nav-menu').hidden=true;">צור קשר</a></li>
-      <li class="mobile-phone-item"><a href="tel:+972522221120">&#128222; <span class="phone-number">0522-221-120</span></a></li>
+      <li class="mobile-phone-item"><a href="tel:+972522221120"><span class="phone-number">0522-221-120</span></a></li>
     </ul>
   </div>
 </header>
@@ -1772,7 +717,7 @@ html.a11y-contrast #a11y-panel {
 
 <!-- GEO BAR -->
 <div class="geo-bar" role="complementary" aria-label="אזורי שירות">
-  <span class="geo-label">&#128205; מעניקים שירות באזור חדרה עד גדרה</span>
+  <span class="geo-label">אזורי שירות — חדרה עד גדרה</span>
   <div class="geo-chips">
     <span>תל אביב והמרכז</span>
     <span>גוש דן</span>
@@ -1789,7 +734,7 @@ html.a11y-contrast #a11y-panel {
 <!-- HERO -->
 <section class="hero-split" aria-labelledby="hero-heading">
   <div class="hero-split-text">
-    <p class="hero-eyebrow">מורשה ומבוטח &middot; מחדרה עד גדרה</p>
+    <p class="hero-eyebrow">מורשה ומבוטח · מחדרה עד גדרה</p>
     <h1 id="hero-heading">
       <span class="hero-h1-main">איטום ועבודות מעטפת בגובה</span>
       <br>
@@ -1841,12 +786,14 @@ html.a11y-contrast #a11y-panel {
       <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%95%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8"
          class="btn btn-primary" target="_blank" rel="noopener"
          aria-label="לקבלת ייעוץ והצעת מחיר בוואטסאפ">
-        &#128172; לקבלת ייעוץ והצעת מחיר
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        לקבלת ייעוץ והצעת מחיר
       </a>
       <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%94%D7%A2%D7%A8%D7%9B%D7%94"
          class="btn btn-outline-w" target="_blank" rel="noopener"
          aria-label="שלחו תמונה וקבלו הערכה בוואטסאפ">
-        &#128247; שלחו תמונה וקבלו הערכה
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        שלחו תמונה וקבלו הערכה
       </a>
     </div>
   </div>
@@ -1874,403 +821,470 @@ html.a11y-contrast #a11y-panel {
 </div>
 
 <!-- WHY US MINI -->
-  <section class="why-mini" aria-labelledby="why-mini-heading">
-    <h2 id="why-mini-heading" class="sr-only">למה לעבוד דווקא איתנו</h2>
-    <div class="why-mini-grid">
-      <div class="why-mini-card">
-        <span class="why-mini-icon" aria-hidden="true">🏗️</span>
-        <strong>ניסיון מעשי של עשרות שנים</strong>
-        <p>מאות פרויקטים של איטום, שיקום ועבודות גובה בבניינים פרטיים ומסחריים ברחבי המרכז.</p>
-      </div>
-      <div class="why-mini-card">
-        <span class="why-mini-icon" aria-hidden="true">🪢</span>
-        <strong>פתרונות ללא פיגומים</strong>
-        <p>עבודה בסנפלינג — מהירה יותר, זולה יותר, ובלי לחסום את הכניסה לבניין.</p>
-      </div>
-      <div class="why-mini-card">
-        <span class="why-mini-icon" aria-hidden="true">🎯</span>
-        <strong>עבודה נקייה ומדויקת</strong>
-        <p>פועלים בצורה מסודרת, מפרטים לפני ואחרי, ומשאירים את הסביבה נקייה.</p>
-      </div>
-      <div class="why-mini-card">
-        <span class="why-mini-icon" aria-hidden="true">🤝</span>
-        <strong>מענה מקצועי ואמין</strong>
-        <p>אבחון ישיר, הצעת מחיר שקופה, ועמידה בלוחות זמנים — ללא הפתעות.</p>
-      </div>
+<section class="why-mini" aria-labelledby="why-mini-heading">
+  <h2 id="why-mini-heading" class="sr-only">למה לעבוד דווקא איתנו</h2>
+  <div class="why-mini-grid">
+    <div class="why-mini-card">
+      <span class="why-mini-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="28" height="28" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="6" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="16" y1="16" x2="16" y2="34" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+      </span>
+      <strong>ניסיון מעשי של עשרות שנים</strong>
+      <p>מאות פרויקטים של איטום, שיקום ועבודות גובה בבניינים פרטיים ומסחריים ברחבי המרכז.</p>
     </div>
-  </section>
-
-  <!-- BANNER -->
-  <div class="banner-strip" role="complementary" aria-label="יצירת קשר מהיר">
-    <span>📍 תל אביב · גוש דן · רמת גן · גבעתיים</span>
-    <span>|</span>
-    <a href="tel:+972522221120" aria-label="התקשר 0522-221-120">
-      &#128222; <span class="phone-number">0522-221-120</span>
-    </a>
-    <span>|</span>
-    <span>⏰ א–ו, <bdo dir="ltr">07:00–18:00</bdo></span>
+    <div class="why-mini-card">
+      <span class="why-mini-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="2" x2="20" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M14 12h12l-2 22h-8z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <strong>פתרונות ללא פיגומים</strong>
+      <p>עבודה בסנפלינג — מהירה יותר, זולה יותר, ובלי לחסום את הכניסה לבניין.</p>
+    </div>
+    <div class="why-mini-card">
+      <span class="why-mini-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.5"/>
+          <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="20" y1="2" x2="20" y2="9" stroke="currentColor" stroke-width="2.5"/>
+          <line x1="20" y1="31" x2="20" y2="38" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+      </span>
+      <strong>עבודה נקייה ומדויקת</strong>
+      <p>פועלים בצורה מסודרת, מפרטים לפני ואחרי, ומשאירים את הסביבה נקייה.</p>
+    </div>
+    <div class="why-mini-card">
+      <span class="why-mini-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="30" height="30" stroke="currentColor" stroke-width="2.5"/>
+          <polyline points="13,20 18,25 28,15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <strong>מענה מקצועי ואמין</strong>
+      <p>אבחון ישיר, הצעת מחיר שקופה, ועמידה בלוחות זמנים — ללא הפתעות.</p>
+    </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services" class="sec sec-mid" aria-labelledby="services-heading">
-    <span class="pre-label" aria-hidden="true">מה אנחנו עושים</span>
-    <h2 id="services-heading" class="sec-title">שירותי עבודות גובה<br>מלאים ומקצועיים</h2>
-    <p class="sec-sub">פתרון מקצועי לכל עבודות הגובה — מניקוי שגרתי ועד שיפוץ מורכב, הכל בסנפלינג ובלי פיגומים יקרים.</p>
-        <ul class="services-grid" aria-label="רשימת שירותים">
-      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🚀</div>
-        <h3><a href="tikun-nizkey-hedef.html" style="color:inherit;text-decoration:none;">תיקון נזקי הדף</a></h3>
-        <p>תיקון סדקים, שברים, נפילות טיח ופגיעות בחזיתות בעקבות הדף, רסיסים או רעידות — כולל איטום נקודתי ושיקום חיצוני בגובה.</p>
-        <a href="tikun-nizkey-hedef.html" class="card-link" aria-label="קרא עוד על תיקון נזקי הדף">פרטים נוספים ←</a>
-      </li>      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🛡️</div>
-        <h3><a href="itum-gag.html" style="color:inherit;text-decoration:none;">איטום גגות וחזיתות</a></h3>
-        <p>איתור וטיפול בנזילות, סדקים וחדירת מים — עם חומרי איטום מקצועיים לאורך שנים.</p>
-        <a href="itum-gag.html" class="card-link" aria-label="קרא עוד על איטום גגות">פרטים נוספים ←</a>
-      </li>      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🎨</div>
-        <h3>צביעת חזיתות</h3>
-        <p>צביעה מקצועית לחזיתות בניינים — הכנת משטח, עבודות טיח, ציפוי וגמר באיכות גבוהה.</p>
-      </li>      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🔧</div>
-        <h3>תיקון סדקים ופגמים</h3>
-        <p>איתור וטיפול בסדקים מבניים, ריסוס, טיח וחיפוי — ללא צורך בפיגומים יקרים.</p>
-      </li>
-      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🔒</div>
-        <h3>איטום בסנפלינג</h3>
-        <p>איטום מקצועי של חזיתות, גגות וחוליות בניין — ישירות בחבלים, ללא פיגומים. פתרון מהיר ויעיל לנזילות ורטיבות בכל גובה.</p>
-      </li>
-      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🧹</div>
-        <h3><a href="nikuy-hazitot.html" style="color:inherit;text-decoration:none;">ניקוי חזיתות בניינים</a></h3>
-        <p>ניקוי מקצועי של חזיתות, הסרת כתמים, אצות, קמטי אוויר ולכלוך שנים — בסנפלינג, ללא פיגומים.</p>
-        <a href="nikuy-hazitot.html" class="card-link" aria-label="קרא עוד על ניקוי חזיתות">פרטים נוספים ←</a>
-      </li>
-      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">🌧️</div>
-        <h3><a href="marzavim.html" style="color:inherit;text-decoration:none;">התקנת מרזבים בסנפלינג</a></h3>
-        <p>התקנה, החלפה ותיקון מרזבים בכל גובה — ללא פיגומים, עם חומרים איכותיים ואחריות. שירות מהיר לכל סוגי הבניינים.</p>
-        <a href="marzavim.html" class="card-link" aria-label="קרא עוד על התקנת מרזבים">פרטים נוספים ←</a>
-      </li>
-      <li class="service-card">
-        <div class="service-icon" aria-hidden="true">⚠️</div>
-        <h3><a href="binyan-mesukan.html" style="color:inherit;text-decoration:none;">הסרת צו בניין מסוכן</a></h3>
-        <p>אבחון, תיקון חזית ודיווח לעירייה להסרת צו בניין מסוכן — מהר, בסנפלינג, ללא עיכובים. מנוסים מול כל עיריות גוש דן.</p>
-        <a href="binyan-mesukan.html" class="card-link" aria-label="קרא עוד על הסרת צו בניין מסוכן">פרטים נוספים ←</a>
-      </li>
-    </ul>
-  </section>
+<!-- BANNER -->
+<div class="banner-strip" role="complementary" aria-label="יצירת קשר מהיר">
+  <span>תל אביב · גוש דן · רמת גן · גבעתיים</span>
+  <span class="banner-sep">|</span>
+  <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a>
+  <span class="banner-sep">|</span>
+  <span>א׳–ו׳ <bdo dir="ltr">07:00–18:00</bdo></span>
+</div>
 
-  
-  <!-- HOW TO START -->
-  <section id="how" class="sec sec-mid" aria-labelledby="how-heading">
-    <div class="how-wrap">
-      <span class="pre-label" aria-hidden="true">בואו נתחיל</span>
-      <h2 id="how-heading">איך מתחילים?</h2>
-      <div class="how-steps">
-        <div class="how-step">
-          <h3>שולחים תמונות ופרטים בוואטסאפ</h3>
-          <p>שלחו לנו תמונות של החזית, הגג או האזור הבעייתי, יחד עם עיר ומספר קומות.</p>
-        </div>
-        <div class="how-step">
-          <h3>מקבלים אבחון ראשוני</h3>
-          <p>נבין אם נדרש ניקוי, איטום, תיקון סדקים או עבודת גובה אחרת.</p>
-        </div>
-        <div class="how-step">
-          <h3>מקבלים הצעת מחיר מסודרת</h3>
-          <p>נשלח הצעת מחיר ברורה, עם פירוט העבודה, זמני ביצוע ותנאי אחריות.</p>
-        </div>
-        <div class="how-step">
-          <h3>מבצעים עבודה בבטיחות מלאה</h3>
-          <p>צוות מנוסה מגיע לשטח עם ציוד סנפלינג מקצועי וביטוח מתאים.</p>
-        </div>
+<!-- SERVICES -->
+<section id="services" class="sec" data-idx="01 / SERVICES" aria-labelledby="services-heading">
+  <span class="pre-label" aria-hidden="true">מה אנחנו עושים</span>
+  <h2 id="services-heading" class="sec-title">שירותי עבודות גובה מלאים ומקצועיים</h2>
+  <p class="sec-sub">פתרון מקצועי לכל עבודות הגובה — מניקוי שגרתי ועד שיפוץ מורכב, הכל בסנפלינג ובלי פיגומים יקרים.</p>
+  <ul class="services-grid" aria-label="רשימת שירותים">
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">01</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="30" height="30" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M12 35L18 22L15 16L22 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-      <div class="how-cta-wrap">
-        <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94"
-           class="btn btn-primary"
-           target="_blank"
-           rel="noopener"
-           aria-label="שלחו תמונות בוואטסאפ לקבלת הצעת מחיר">
-          📲 שלחו תמונות בוואטסאפ
-        </a>
+      <h3><a href="tikun-nizkey-hedef.html">תיקון נזקי הדף</a></h3>
+      <p>תיקון סדקים, שברים, נפילות טיח ופגיעות בחזיתות בעקבות הדף, רסיסים או רעידות — כולל איטום נקודתי ושיקום חיצוני בגובה.</p>
+      <a href="tikun-nizkey-hedef.html" class="card-link" aria-label="קרא עוד על תיקון נזקי הדף">פרטים נוספים ←</a>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">02</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4L7 9v9c0 7.6 5.2 14.7 13 16.9C27.8 32.7 33 25.6 33 18V9z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M20 14c-2.5 3.2-4 5.4-4 7.4a4 4 0 008 0c0-2-1.5-4.2-4-7.4z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3><a href="itum-gag.html">איטום גגות וחזיתות</a></h3>
+      <p>איתור וטיפול בנזילות, סדקים וחדירת מים — עם חומרי איטום מקצועיים לאורך שנים.</p>
+      <a href="itum-gag.html" class="card-link" aria-label="קרא עוד על איטום גגות">פרטים נוספים ←</a>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">03</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="6" width="22" height="10" rx="1" stroke="currentColor" stroke-width="2.5"/>
+          <path d="M28 9h5v8H20v6" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="17" y="23" width="6" height="12" rx="1" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <h3>צביעת חזיתות</h3>
+      <p>צביעה מקצועית לחזיתות בניינים — הכנת משטח, עבודות טיח, ציפוי וגמר באיכות גבוהה.</p>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">04</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M33 13a8 8 0 01-10.6 7.6L12 31a3.5 3.5 0 01-5-5l10.4-10.4A8 8 0 0127 5l-4 4 3 3 4-4a8 8 0 013 5z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>תיקון סדקים ופגמים</h3>
+      <p>איתור וטיפול בסדקים מבניים, ריסוס, טיח וחיפוי — ללא צורך בפיגומים יקרים.</p>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">05</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="20" y1="2" x2="20" y2="10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M13 10h14v9a7 7 0 01-14 0z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="20" y1="26" x2="20" y2="38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <h3>איטום בסנפלינג</h3>
+      <p>איטום מקצועי של חזיתות, גגות וחוליות בניין — ישירות בחבלים, ללא פיגומים. פתרון מהיר ויעיל לנזילות ורטיבות בכל גובה.</p>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">06</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 36V12l12-7 12 7v24" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M14 18l6 4 6-4M14 26l6 4 6-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3><a href="nikuy-hazitot.html">ניקוי חזיתות בניינים</a></h3>
+      <p>ניקוי מקצועי של חזיתות, הסרת כתמים, אצות, קמטי אוויר ולכלוך שנים — בסנפלינג, ללא פיגומים.</p>
+      <a href="nikuy-hazitot.html" class="card-link" aria-label="קרא עוד על ניקוי חזיתות">פרטים נוספים ←</a>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">07</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 6h18v8H14v20a4 4 0 01-8 0v-4" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M30 18v6M34 24v5M26 26v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3><a href="marzavim.html">התקנת מרזבים בסנפלינג</a></h3>
+      <p>התקנה, החלפה ותיקון מרזבים בכל גובה — ללא פיגומים, עם חומרים איכותיים ואחריות. שירות מהיר לכל סוגי הבניינים.</p>
+      <a href="marzavim.html" class="card-link" aria-label="קרא עוד על התקנת מרזבים">פרטים נוספים ←</a>
+    </li>
+    <li class="service-card">
+      <span class="card-num" aria-hidden="true">08</span>
+      <div class="service-icon" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 5L37 34H3z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="20" y1="16" x2="20" y2="25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="20" cy="29.5" r="0.8" fill="currentColor" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </div>
+      <h3><a href="binyan-mesukan.html">הסרת צו בניין מסוכן</a></h3>
+      <p>אבחון, תיקון חזית ודיווח לעירייה להסרת צו בניין מסוכן — מהר, בסנפלינג, ללא עיכובים. מנוסים מול כל עיריות גוש דן.</p>
+      <a href="binyan-mesukan.html" class="card-link" aria-label="קרא עוד על הסרת צו בניין מסוכן">פרטים נוספים ←</a>
+    </li>
+  </ul>
+</section>
+
+<!-- HOW TO START -->
+<section id="how" class="sec" data-idx="02 / PROCESS" aria-labelledby="how-heading">
+  <div class="how-wrap">
+    <span class="pre-label" aria-hidden="true">בואו נתחיל</span>
+    <h2 id="how-heading">איך מתחילים?</h2>
+    <p class="sec-sub">ארבעה שלבים — מהפנייה הראשונה ועד עבודה מבוצעת.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <h3>שולחים תמונות ופרטים בוואטסאפ</h3>
+        <p>שלחו לנו תמונות של החזית, הגג או האזור הבעייתי, יחד עם עיר ומספר קומות.</p>
+      </div>
+      <div class="how-step">
+        <h3>מקבלים אבחון ראשוני</h3>
+        <p>נבין אם נדרש ניקוי, איטום, תיקון סדקים או עבודת גובה אחרת.</p>
+      </div>
+      <div class="how-step">
+        <h3>מקבלים הצעת מחיר מסודרת</h3>
+        <p>נשלח הצעת מחיר ברורה, עם פירוט העבודה, זמני ביצוע ותנאי אחריות.</p>
+      </div>
+      <div class="how-step">
+        <h3>מבצעים עבודה בבטיחות מלאה</h3>
+        <p>צוות מנוסה מגיע לשטח עם ציוד סנפלינג מקצועי וביטוח מתאים.</p>
       </div>
     </div>
-  </section>
-
-
-  <!-- WHO IS IT FOR -->
-  <section id="audience" class="sec" aria-labelledby="audience-heading">
-    <span class="pre-label" aria-hidden="true">הלקוחות שלנו</span>
-    <h2 id="audience-heading">למי השירות מתאים?</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏢</span>
-        <h3>ועדי בתים</h3>
-        <p>ניהול תחזוקה שוטפת של חזיתות וגגות — בלי להטריח את הדיירים.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🔧</span>
-        <h3>חברות ניהול ואחזקה</h3>
-        <p>שותף מקצועי לעבודות גובה שדורשות ציוד סנפלינג וביטוח ייעודי.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏬</span>
-        <h3>בנייני משרדים ומסחר</h3>
-        <p>ניקוי וצביעת חזיתות זכוכית ובטון — עם מינימום הפרעה לפעילות השוטפת.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🏗️</span>
-        <h3>קבלנים ויזמים</h3>
-        <p>השלמת עבודות גמר בגובה — איטום, גינון אנכי, ותיקונים לפני מסירה.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">💧</span>
-        <h3>בעלי דירות עם בעיות רטיבות</h3>
-        <p>אבחון ואיטום מדויק של נקודות חדירת מים — גם בקומות גבוהות.</p>
-      </div>
-      <div class="service-card">
-        <span class="svc-icon" aria-hidden="true">🌪️</span>
-        <h3>מבנים אחרי נזקי מזג אוויר</h3>
-        <p>תיקון מהיר של סדקים, ציפוי קורוזיה ונזקי הדף לאחר סופות.</p>
-      </div>
+    <div class="how-cta-wrap">
+      <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9C%D7%95%D7%97%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94"
+         class="btn btn-primary"
+         target="_blank"
+         rel="noopener"
+         aria-label="שלחו תמונות בוואטסאפ לקבלת הצעת מחיר">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        שלחו תמונות בוואטסאפ
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- WHO IS IT FOR -->
+<section id="audience" class="sec" data-idx="03 / CLIENTS" aria-labelledby="audience-heading">
+  <span class="pre-label" aria-hidden="true">הלקוחות שלנו</span>
+  <h2 id="audience-heading">למי השירות מתאים?</h2>
+  <p class="sec-sub">עובדים עם ועדי בתים, חברות ניהול, קבלנים ובעלי נכסים — בכל קנה מידה.</p>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">01 /</span>
+      <h3>ועדי בתים</h3>
+      <p>ניהול תחזוקה שוטפת של חזיתות וגגות — בלי להטריח את הדיירים.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">02 /</span>
+      <h3>חברות ניהול ואחזקה</h3>
+      <p>שותף מקצועי לעבודות גובה שדורשות ציוד סנפלינג וביטוח ייעודי.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">03 /</span>
+      <h3>בנייני משרדים ומסחר</h3>
+      <p>ניקוי וצביעת חזיתות זכוכית ובטון — עם מינימום הפרעה לפעילות השוטפת.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">04 /</span>
+      <h3>קבלנים ויזמים</h3>
+      <p>השלמת עבודות גמר בגובה — איטום, גינון אנכי, ותיקונים לפני מסירה.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">05 /</span>
+      <h3>בעלי דירות עם בעיות רטיבות</h3>
+      <p>אבחון ואיטום מדויק של נקודות חדירת מים — גם בקומות גבוהות.</p>
+    </div>
+    <div class="audience-card">
+      <span class="audience-num" aria-hidden="true">06 /</span>
+      <h3>מבנים אחרי נזקי מזג אוויר</h3>
+      <p>תיקון מהיר של סדקים, ציפוי קורוזיה ונזקי הדף לאחר סופות.</p>
+    </div>
+  </div>
+</section>
 
 <!-- GALLERY -->
-  <section id="gallery" class="sec" aria-labelledby="gallery-heading">
-    <span class="pre-label" aria-hidden="true">מהשטח</span>
-    <h2 id="gallery-heading" class="sec-title">עבודות שביצענו</h2>
-    <p class="sec-sub">חלק מהפרויקטים שביצענו בשנים האחרונות — ניקוי, איטום וצביעת חזיתות בניינים.</p>
-    <div class="gallery-grid" role="list" aria-label="גלריית עבודות">
-      <img src="gallery_photos/photo_07_895189977194393.jpg" alt="עבודות גובה בסנפלינג על חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_18_1242719805774740.jpg" alt="עובד אלדרור בסנפלינג על חזית בניין גבוה" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_08_895189970527727.jpg" alt="צוות אלדרור בעבודת גובה על בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_17_1267250763321644.jpg" alt="עובדי אלדרור על גג בניין מסחרי — עבודות סנפלינג" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1316290298417690.jpg" alt="עבודות חבלים וסנפלינג על חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719815774739.jpg" alt="עובד סנפלינג על קיר חיצוני של בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719855774735.jpg" alt="ירידה בחבלים על חזית בניין — אלדרור" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_01_913049918741732.jpg" alt="עובד סנפלינג על חזית בניין — ניקוי חזיתות" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_02_903761689670555.jpg" alt="צוות אלדרור בעבודת שיפוץ חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_03_903761683003889.jpg" alt="עבודות גובה — שיפוץ ואיטום חזית בניין" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_04_903761666337224.jpg" alt="עבודות סנפלינג — ניקוי ואיטום חזיתות" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_06_903761636337227.jpg" alt="צוות אלדרור על חזית בניין — ריסוס ואיטום" loading="lazy" role="listitem">
-      <img src="gallery_photos/extra_1242719889108065.jpg" alt="חזית בניין לאחר עבודות ניקוי ואיטום" loading="lazy" role="listitem">
-      <img src="gallery_photos/photo_05_903761656337225.jpg" alt="בניין לאחר עבודות שיפוץ ואיטום חזיתות" loading="lazy" role="listitem">
-    </div>
-  </section>
+<section id="gallery" class="sec" data-idx="04 / FIELD" aria-labelledby="gallery-heading">
+  <span class="pre-label" aria-hidden="true">מהשטח</span>
+  <h2 id="gallery-heading" class="sec-title">עבודות שביצענו</h2>
+  <p class="sec-sub">חלק מהפרויקטים שביצענו בשנים האחרונות — ניקוי, איטום וצביעת חזיתות בניינים.</p>
+  <div class="gallery-grid" role="list" aria-label="גלריית עבודות">
+    <img src="gallery_photos/photo_07_895189977194393.jpg" alt="עבודות גובה בסנפלינג על חזית בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_18_1242719805774740.jpg" alt="עובד אלדרור בסנפלינג על חזית בניין גבוה" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_08_895189970527727.jpg" alt="צוות אלדרור בעבודת גובה על בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_17_1267250763321644.jpg" alt="עובדי אלדרור על גג בניין מסחרי — עבודות סנפלינג" loading="lazy" role="listitem">
+    <img src="gallery_photos/extra_1316290298417690.jpg" alt="עבודות חבלים וסנפלינג על חזית בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/extra_1242719815774739.jpg" alt="עובד סנפלינג על קיר חיצוני של בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/extra_1242719855774735.jpg" alt="ירידה בחבלים על חזית בניין — אלדרור" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_01_913049918741732.jpg" alt="עובד סנפלינג על חזית בניין — ניקוי חזיתות" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_02_903761689670555.jpg" alt="צוות אלדרור בעבודת שיפוץ חזית בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_03_903761683003889.jpg" alt="עבודות גובה — שיפוץ ואיטום חזית בניין" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_04_903761666337224.jpg" alt="עבודות סנפלינג — ניקוי ואיטום חזיתות" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_06_903761636337227.jpg" alt="צוות אלדרור על חזית בניין — ריסוס ואיטום" loading="lazy" role="listitem">
+    <img src="gallery_photos/extra_1242719889108065.jpg" alt="חזית בניין לאחר עבודות ניקוי ואיטום" loading="lazy" role="listitem">
+    <img src="gallery_photos/photo_05_903761656337225.jpg" alt="בניין לאחר עבודות שיפוץ ואיטום חזיתות" loading="lazy" role="listitem">
+  </div>
+</section>
 
-  <!-- WHY US -->
-  <section id="why" class="sec sec-mid" aria-labelledby="why-heading">
-    <div class="why-wrap">
-      <figure class="why-visual">
-        <img class="why-img"
-          src="gallery_photos/photo_09_1440161506030568.jpg"
-          alt="צוות אלדרור בעבודת סנפלינג על חזית בניין גבוה"
-          loading="lazy">
-        <figcaption class="why-badge" aria-label="30 שנות ניסיון">
-          <div class="num">30+</div>
-          <div class="lbl">שנות ניסיון</div>
-        </figcaption>
-      </figure>
-      <div>
-        <span class="pre-label" aria-hidden="true">למה לבחור בנו</span>
-        <h2 id="why-heading" class="sec-title">ניסיון שמדבר<br>בעד עצמו</h2>
-        <p class="sec-sub">מעל שלושה עשורים של עבודות גובה — בטיחות ומקצועיות הם לא מילים, הם אורח חיים.</p>
-        <ul class="why-points" aria-label="יתרונות החברה">
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>ציוד מתקדם ובטוח</h3>
-              <p>ציוד סנפלינג מקצועי ומוסמך, עמידה בכל תקנות הבטיחות הישראליות.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>ביטוח מלא</h3>
-              <p>ביטוח צד שלישי מלא, ביטוח עבודות ואחריות על כל פרויקט.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>זמינות ומהירות תגובה</h3>
-              <p>מגיבים תוך שעות, הצעת מחיר מהירה, מתחילים עבודה בהקדם האפשרי.</p>
-            </div>
-          </li>
-          <li class="why-point">
-            <div class="why-dot" aria-hidden="true"></div>
-            <div>
-              <h3>מחירים שקופים</h3>
-              <p>הצעות מחיר ברורות ללא הפתעות — מה שסיכמנו, זה מה שמשלמים.</p>
-            </div>
-          </li>
-        </ul>
+<!-- WHY US -->
+<section id="why" class="sec" data-idx="05 / TRUST" aria-labelledby="why-heading">
+  <div class="why-wrap">
+    <figure class="why-visual">
+      <img class="why-img"
+        src="gallery_photos/photo_09_1440161506030568.jpg"
+        alt="צוות אלדרור בעבודת סנפלינג על חזית בניין גבוה"
+        loading="lazy">
+      <figcaption class="why-badge" aria-label="30 שנות ניסיון">
+        <div class="num">30+</div>
+        <div class="lbl">שנות ניסיון</div>
+      </figcaption>
+    </figure>
+    <div>
+      <span class="pre-label" aria-hidden="true">למה לבחור בנו</span>
+      <h2 id="why-heading" class="sec-title">ניסיון שמדבר בעד עצמו</h2>
+      <p class="sec-sub">מעל שלושה עשורים של עבודות גובה — בטיחות ומקצועיות הם לא מילים, הם אורח חיים.</p>
+      <ul class="why-points" aria-label="יתרונות החברה">
+        <li class="why-point">
+          <div class="why-dot" aria-hidden="true"></div>
+          <div>
+            <h3>ציוד מתקדם ובטוח</h3>
+            <p>ציוד סנפלינג מקצועי ומוסמך, עמידה בכל תקנות הבטיחות הישראליות.</p>
+          </div>
+        </li>
+        <li class="why-point">
+          <div class="why-dot" aria-hidden="true"></div>
+          <div>
+            <h3>ביטוח מלא</h3>
+            <p>ביטוח צד שלישי מלא, ביטוח עבודות ואחריות על כל פרויקט.</p>
+          </div>
+        </li>
+        <li class="why-point">
+          <div class="why-dot" aria-hidden="true"></div>
+          <div>
+            <h3>זמינות ומהירות תגובה</h3>
+            <p>מגיבים תוך שעות, הצעת מחיר מהירה, מתחילים עבודה בהקדם האפשרי.</p>
+          </div>
+        </li>
+        <li class="why-point">
+          <div class="why-dot" aria-hidden="true"></div>
+          <div>
+            <h3>מחירים שקופים</h3>
+            <p>הצעות מחיר ברורות ללא הפתעות — מה שסיכמנו, זה מה שמשלמים.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec" data-idx="06 / FAQ" aria-labelledby="faq-heading">
+  <div class="faq-wrap">
+    <span class="pre-label" aria-hidden="true">שאלות ותשובות</span>
+    <h2 id="faq-heading">שאלות נפוצות</h2>
+    <p class="sec-sub">התשובות לשאלות שאנחנו שומעים הכי הרבה.</p>
+    <dl class="faq-list">
+      <div class="faq-item">
+        <dt>מה זה בעצם נזקי הדף ומתי צריך לטפל בזה?</dt>
+        <dd>הדף נגרם מפיצוץ, רעידת אדמה או אירוע ביטחוני ומשאיר סדקים, שברים ונפילות טיח בחזית הבניין. חשוב לטפל מהר — נזק שלא מטופל מתרחב, מאפשר חדירת מים ומסכן את שלמות החזית.</dd>
       </div>
-    </div>
-  </section>
-
-  
-  <!-- FAQ -->
-  <section id="faq" class="sec sec-mid" aria-labelledby="faq-heading">
-    <div class="faq-wrap">
-      <span class="pre-label" aria-hidden="true">שאלות ותשובות</span>
-      <h2 id="faq-heading">שאלות נפוצות</h2>
-      <dl class="faq-list">
-        <div class="faq-item">
-          <dt>מה זה בעצם נזקי הדף ומתי צריך לטפל בזה?</dt>
-          <dd>הדף נגרם מפיצוץ, רעידת אדמה או אירוע ביטחוני ומשאיר סדקים, שברים ונפילות טיח בחזית הבניין. חשוב לטפל מהר — נזק שלא מטופל מתרחב, מאפשר חדירת מים ומסכן את שלמות החזית.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם אפשר לבצע עבודות גובה בלי פיגומים?</dt>
-          <dd>כן. בסנפלינג ניתן להגיע לכל נקודה בחזית הבניין — גם בגבהים קיצוניים — בלי פיגומים, מה שחוסך עלויות ומקצר משמעותית את זמן הביצוע.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם אתם עובדים עם חברות ביטוח לנזקי מלחמה?</dt>
-          <dd>כן. אנחנו מלווים תהליכי תיעוד ועובדים עם בעלי דירות ומנהלי ועדי בתים מול חברות הביטוח — כולל אבחון, הצעת מחיר ודוח עבודה מסודר.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>באילו אזורים אתם פועלים?</dt>
-          <dd>תל אביב, גוש דן, רמת גן, גבעתיים, בני ברק, פתח תקווה ואזור המרכז. לפניות מאזורים אחרים — מוזמנים לשאול.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>כמה זמן לוקח תיקון נזקי הדף בבניין?</dt>
-          <dd>תלוי בהיקף הנזק — תיקון נקודתי עשוי להסתיים תוך יום-יומיים, בעוד שיקום מלא של חזית יכול לקחת מספר ימים. אנחנו מספקים הערכה מדויקת לאחר הסתכלות ראשונית.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>איך מקבלים הצעת מחיר?</dt>
-          <dd>שלחו תמונות ופרטים בוואטסאפ — נחזור עם אבחון ראשוני והצעה מסודרת, בדרך כלל תוך שעות ספורות.</dd>
-        </div>
-        <div class="faq-item">
-          <dt>האם יש אחריות על העבודה?</dt>
-          <dd>בהחלט. ניתנת אחריות לפי סוג העבודה והחומרים בהם נעשה שימוש. פרטי האחריות מצוינים בהצעת המחיר.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
+      <div class="faq-item">
+        <dt>האם אפשר לבצע עבודות גובה בלי פיגומים?</dt>
+        <dd>כן. בסנפלינג ניתן להגיע לכל נקודה בחזית הבניין — גם בגבהים קיצוניים — בלי פיגומים, מה שחוסך עלויות ומקצר משמעותית את זמן הביצוע.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>האם אתם עובדים עם חברות ביטוח לנזקי מלחמה?</dt>
+        <dd>כן. אנחנו מלווים תהליכי תיעוד ועובדים עם בעלי דירות ומנהלי ועדי בתים מול חברות הביטוח — כולל אבחון, הצעת מחיר ודוח עבודה מסודר.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>באילו אזורים אתם פועלים?</dt>
+        <dd>תל אביב, גוש דן, רמת גן, גבעתיים, בני ברק, פתח תקווה ואזור המרכז. לפניות מאזורים אחרים — מוזמנים לשאול.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>כמה זמן לוקח תיקון נזקי הדף בבניין?</dt>
+        <dd>תלוי בהיקף הנזק — תיקון נקודתי עשוי להסתיים תוך יום-יומיים, בעוד שיקום מלא של חזית יכול לקחת מספר ימים. אנחנו מספקים הערכה מדויקת לאחר הסתכלות ראשונית.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>איך מקבלים הצעת מחיר?</dt>
+        <dd>שלחו תמונות ופרטים בוואטסאפ — נחזור עם אבחון ראשוני והצעה מסודרת, בדרך כלל תוך שעות ספורות.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>האם יש אחריות על העבודה?</dt>
+        <dd>בהחלט. ניתנת אחריות לפי סוג העבודה והחומרים בהם נעשה שימוש. פרטי האחריות מצוינים בהצעת המחיר.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
 
 <!-- CONTACT -->
-  <section id="contact" class="sec" aria-labelledby="contact-heading">
-    <span class="pre-label" aria-hidden="true">בואו נדבר</span>
-    <h2 id="contact-heading" class="sec-title">צרו קשר לקבלת<br>הצעת מחיר</h2>
-    <div class="contact-wrap">
-      <div>
-        <p class="sec-sub">השאירו פרטים ונחזור אליכם תוך שעות ספורות עם הצעת מחיר מותאמת לצרכים שלכם.</p>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📞</div>
-            <div>
-              <span class="lbl">טלפון</span>
-              <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a>
-            </div>
+<section id="contact" class="sec" data-idx="07 / CONTACT" aria-labelledby="contact-heading">
+  <span class="pre-label" aria-hidden="true">בואו נדבר</span>
+  <h2 id="contact-heading" class="sec-title">צרו קשר לקבלת הצעת מחיר</h2>
+  <div class="contact-wrap">
+    <div>
+      <p class="sec-sub">השאירו פרטים ונחזור אליכם תוך שעות ספורות עם הצעת מחיר מותאמת לצרכים שלכם.</p>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">💬</div>
-            <div>
-              <span class="lbl">וואטסאפ</span>
-              <a href="https://wa.me/972522221120" aria-label="שלח הודעת וואטסאפ">שלח הודעה עכשיו</a>
-            </div>
+          <div>
+            <span class="lbl">טלפון</span>
+            <a href="tel:+972522221120" aria-label="התקשר 0522-221-120"><span class="phone-number">0522-221-120</span></a>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">📍</div>
-            <div>
-              <span class="lbl">אזור פעילות</span>
-              <strong>תל אביב, גוש דן והמרכז</strong>
-            </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/></svg>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon" aria-hidden="true">🕐</div>
-            <div>
-              <span class="lbl">שעות פעילות</span>
-              <strong>ימים א–ו · <bdo dir="ltr">07:00–18:00</bdo></strong>
-            </div>
+          <div>
+            <span class="lbl">וואטסאפ</span>
+            <a href="https://wa.me/972522221120" aria-label="שלח הודעת וואטסאפ">שלח הודעה עכשיו</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <span class="lbl">אזור פעילות</span>
+            <strong>תל אביב, גוש דן והמרכז</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div>
+            <span class="lbl">שעות פעילות</span>
+            <strong>ימים א׳–ו׳ · <bdo dir="ltr">07:00–18:00</bdo></strong>
           </div>
         </div>
       </div>
-
-      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)" novalidate aria-label="טופס פנייה">
-        <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
-        <div class="form-row">
-          <div class="field-wrap">
-            <label for="name">שם מלא <span aria-hidden="true">*</span></label>
-            <input id="name" type="text" placeholder="ישראל ישראלי" required aria-required="true" aria-describedby="name-err" autocomplete="name">
-            <span id="name-err" class="field-error" role="alert">נא להזין שם מלא</span>
-          </div>
-          <div class="field-wrap">
-            <label for="phone">טלפון <span aria-hidden="true">*</span></label>
-            <input id="phone" type="tel" placeholder="05X-XXX-XXXX" required aria-required="true" dir="ltr" aria-describedby="phone-err" autocomplete="tel" inputmode="tel">
-            <span id="phone-err" class="field-error" role="alert">נא להזין מספר טלפון</span>
-          </div>
-        </div>
-        <div class="field-wrap">
-          <label for="service">סוג העבודה</label>
-          <select id="service" aria-label="בחר סוג עבודה">
-            <option value="" disabled selected>בחר שירות</option>
-            <option>ניקוי חזיתות</option>
-            <option>איטום גגות / חזיתות</option>
-            <option>צביעת חזיתות</option>
-            <option>תיקון סדקים</option>
-            <option>תיקון נזקי הדף</option>
-            <option>התקנת מרזבים</option>
-            <option>הסרת צו בניין מסוכן</option>
-            <option>ניקוי חלונות</option>
-            <option>אחר</option>
-          </select>
-        </div>
-        <div class="field-wrap">
-          <label for="message">פרטים נוספים</label>
-          <textarea id="message" placeholder="כמה קומות? באיזו עיר? תיאור קצר של העבודה..." aria-describedby="message-hint"></textarea>
-          <span id="message-hint" style="font-size:0.78rem; color:var(--gray);">אופציונלי — יעזור לנו לתת הצעה מדויקת יותר</span>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">שלח פנייה ←</button>
-      </form>
     </div>
-  </section>
 
-  <!-- ACCESSIBILITY STATEMENT — IS 5568 חובה -->
-  <section id="negishot" class="sec" aria-labelledby="negishot-heading">
-    <h2 id="negishot-heading">הצהרת נגישות</h2>
-    <p>אנו באלדרור עבודות גובה מחויבים להנגשת אתר זה לאנשים עם מוגבלויות, בהתאם לתקן הישראלי IS 5568 ולהנחיות <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 ברמה AA.</p>
-    <ul>
-      <li>האתר תומך בניווט מלא באמצעות מקלדת</li>
-      <li>האתר תומך בקוראי מסך (NVDA, JAWS, VoiceOver)</li>
-      <li>תמונות מלוות בטקסט חלופי</li>
-      <li>ניגודיות צבעים עומדת ביחס 4.5:1 לפחות</li>
-      <li>האתר כולל כפתור נגישות (Alt+A) לשינוי ניגודיות וגודל טקסט</li>
-    </ul>
-    <p>לפניות בנושא נגישות: <a href="tel:+972522221120" dir="ltr" aria-label="התקשר לרכז הנגישות"><span dir="ltr">0522-221-120</span></a> · תאריך עדכון אחרון: יוני 2026</p>
-  </section>
+    <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)" novalidate aria-label="טופס פנייה">
+      <div id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+      <div class="form-row">
+        <div class="field-wrap">
+          <label for="name">שם מלא <span aria-hidden="true">*</span></label>
+          <input id="name" type="text" placeholder="ישראל ישראלי" required aria-required="true" aria-describedby="name-err" autocomplete="name">
+          <span id="name-err" class="field-error" role="alert">נא להזין שם מלא</span>
+        </div>
+        <div class="field-wrap">
+          <label for="phone">טלפון <span aria-hidden="true">*</span></label>
+          <input id="phone" type="tel" placeholder="05X-XXX-XXXX" required aria-required="true" dir="ltr" aria-describedby="phone-err" autocomplete="tel" inputmode="tel">
+          <span id="phone-err" class="field-error" role="alert">נא להזין מספר טלפון</span>
+        </div>
+      </div>
+      <div class="field-wrap">
+        <label for="service">סוג העבודה</label>
+        <select id="service" aria-label="בחר סוג עבודה">
+          <option value="" disabled selected>בחר שירות</option>
+          <option>ניקוי חזיתות</option>
+          <option>איטום גגות / חזיתות</option>
+          <option>צביעת חזיתות</option>
+          <option>תיקון סדקים</option>
+          <option>תיקון נזקי הדף</option>
+          <option>התקנת מרזבים</option>
+          <option>הסרת צו בניין מסוכן</option>
+          <option>ניקוי חלונות</option>
+          <option>אחר</option>
+        </select>
+      </div>
+      <div class="field-wrap">
+        <label for="message">פרטים נוספים</label>
+        <textarea id="message" placeholder="כמה קומות? באיזו עיר? תיאור קצר של העבודה..." aria-describedby="message-hint"></textarea>
+        <span id="message-hint" class="field-hint">אופציונלי — יעזור לנו לתת הצעה מדויקת יותר</span>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">שלח פנייה ←</button>
+    </form>
+  </div>
+</section>
+
+<!-- ACCESSIBILITY STATEMENT — IS 5568 חובה -->
+<section id="negishot" class="sec" data-idx="08 / A11Y" aria-labelledby="negishot-heading">
+  <h2 id="negishot-heading">הצהרת נגישות</h2>
+  <p>אנו באלדרור עבודות גובה מחויבים להנגשת אתר זה לאנשים עם מוגבלויות, בהתאם לתקן הישראלי IS 5568 ולהנחיות <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 ברמה AA.</p>
+  <ul>
+    <li>האתר תומך בניווט מלא באמצעות מקלדת</li>
+    <li>האתר תומך בקוראי מסך (NVDA, JAWS, VoiceOver)</li>
+    <li>תמונות מלוות בטקסט חלופי</li>
+    <li>ניגודיות צבעים עומדת ביחס 4.5:1 לפחות</li>
+    <li>האתר כולל כפתור נגישות (Alt+A) לשינוי ניגודיות וגודל טקסט</li>
+  </ul>
+  <p>לפניות בנושא נגישות: <a href="tel:+972522221120" dir="ltr" aria-label="התקשר לרכז הנגישות"><span dir="ltr">0522-221-120</span></a> · תאריך עדכון אחרון: יוני 2026</p>
+</section>
 
 </main><!-- /main -->
 
-<!-- FACEBOOK BANNER -->
-<section style="padding:0;background:#1877f2;overflow:hidden;">
+<!-- FACEBOOK STRIP -->
+<div class="fb-strip">
   <a href="https://www.facebook.com/eldrorbagova/" target="_blank" rel="noopener"
-     aria-label="עמוד הפייסבוק של אלדרור — לחץ לביקור (נפתח בחלון חדש)"
-     style="display:block;position:relative;">
-    <img src="gallery_photos/photo_15_1355036054543114.jpg"
-         alt="אלדרור עבודות גובה — עמוד פייסבוק"
-         style="width:100%;height:220px;object-fit:cover;display:block;opacity:0.75;">
-    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-                background:rgba(24,119,242,0.62);gap:22px;flex-wrap:wrap;padding:1rem;">
-      <!-- לוגו עגול מהפייסבוק -->
-      <img src="gallery_photos/logo_eldror.jpg"
-           alt="לוגו אלדרור עבודות גובה"
-           style="width:86px;height:86px;border-radius:50%;border:3px solid #fff;object-fit:cover;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.35);">
-      <!-- טקסט + אייקון פייסבוק -->
-      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;">
-        <span style="color:#fff;font-size:1.5rem;font-weight:800;font-family:Assistant,sans-serif;text-shadow:0 1px 4px rgba(0,0,0,0.4);letter-spacing:0.3px;">אלדרור עבודות גובה</span>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
-          <span style="color:rgba(255,255,255,0.92);font-size:1rem;font-family:Assistant,sans-serif;font-weight:600;">עקבו אחרינו בפייסבוק</span>
-        </div>
-      </div>
-    </div>
+     aria-label="עמוד הפייסבוק של אלדרור — לחץ לביקור (נפתח בחלון חדש)">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+    <span>עקבו אחרינו בפייסבוק</span>
+    <span class="fb-mono">/ ELDRORBAGOVA</span>
   </a>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
@@ -2377,7 +1391,6 @@ function resetA11y() {
 }
 </script>
 
-
 <!-- MOBILE BOTTOM CTA BAR -->
 <div class="mobile-cta-bar" role="navigation" aria-label="כפתורי פנייה מהירים">
   <a href="https://wa.me/972522221120?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%9F%20%D7%91%D7%94%D7%A6%D7%A2%D7%AA%20%D7%9E%D7%97%D7%99%D7%A8%20%D7%9C%D7%A2%D7%91%D7%95%D7%93%D7%95%D7%AA%20%D7%92%D7%95%D7%91%D7%94"
@@ -2385,7 +1398,7 @@ function resetA11y() {
      target="_blank" rel="noopener"
      aria-label="שלח הודעת וואטסאפ">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
     וואטסאפ
   </a>
